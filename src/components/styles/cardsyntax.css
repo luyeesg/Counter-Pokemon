@@ -1,0 +1,36 @@
+body {
+ background-color: antiquewhite;
+ text-align: center;
+}
+
+h1 {
+ margin-top: 50px;
+ margin-bottom: 50px;
+}
+
+.pokemon {
+ display: grid;
+ grid-template-columns: 250px;
+ justify-content: center;
+}
+
+.title {
+ margin-top: 20px;
+ font-size: 30px;
+ text-transform: capitalize;
+}
+
+.pokemon-img {
+ width: 250px;
+}
+
+.types {
+ font-family: "New York";
+ font-weight: 500;
+ font-size: 25px;
+ text-transform: capitalize;
+ padding: 20px 80px;
+ margin-bottom: 20px;
+ border-radius: 10px;
+ background-color: white;
+}
