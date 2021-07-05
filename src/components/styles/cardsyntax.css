@@ -8,11 +8,11 @@ h1 {
  margin-bottom: 50px;
 }
 
-.pokemon {
+/* .pokemon {
  display: grid;
  grid-template-columns: 250px;
  justify-content: center;
-}
+} */
 
 .title {
  margin-top: 20px;

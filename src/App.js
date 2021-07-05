@@ -3,10 +3,13 @@ import Pokedex from './components/Pokedex'
 
 const App = () => {
   return (
-    <div>
-      <h1>Made with PokeAPI</h1>
+    <>
+    <h1>Made with PokeAPI</h1>
+    <div className="container">
+      {/* <h1>Made with PokeAPI</h1> */}
       <Pokedex />
     </div>
+    </>
   )
 }
 
