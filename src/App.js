@@ -1,16 +1,28 @@
-import React from 'react'
-import Pokedex from './components/Pokedex'
+import React from "react";
+import Pokedex from "./components/Pokedex";
+import PokemonProvider from "./context/PokemonContext";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PokemonView from "./components/PokemonView"
 
 const App = () => {
   return (
     <>
-    <h1>Made with PokeAPI</h1>
-    <div className="container">
-      {/* <h1>Made with PokeAPI</h1> */}
-      <Pokedex />
-    </div>
+      <div className="app">
+        <PokemonProvider>
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Pokedex />
+              </Route>
+              <Route path="/pokemonview">
+                <PokemonView />
+              </Route>
+            </Switch>
+          </Router>
+        </PokemonProvider>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;

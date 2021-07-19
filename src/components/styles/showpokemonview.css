@@ -1,28 +1,24 @@
-:root {
- --main-bg-color: antiquewhite;
+.show-pokemon {
+ margin-top: 100px;
 }
 
-body {
- background-color: var(--main-bg-color);
- text-align: center;
+.show-pokemon-img {
+ width: 450px;
 }
 
-a {
- color: inherit;
- text-decoration: inherit;
-}
-
-.title {
+.show-title {
  margin-top: 20px;
  font-size: 30px;
  text-transform: capitalize;
 }
 
-.pokemon-img {
- width: 250px;
+.show-pokemon-types {
+ display: grid;
+ grid-template-columns: 450px;
+ justify-content: center;
 }
 
-.types {
+.show-types {
  font-weight: 500;
  font-size: 25px;
  text-transform: capitalize;
