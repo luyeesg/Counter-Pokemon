@@ -1,39 +1,39 @@
 const getCounter = (toCounter) => {
     switch (toCounter) {
         case "normal":
-            return "fighting"
+            return "Fighting"
         case "fighting":
-            return "flying, psychic, fairy"
+            return "Flying, Psychic, Fairy"
         case "poison":
-            return "ground, psychic"
+            return "Ground, Psychic"
         case "ground":
-            return "water, grass, ice"
+            return "Water, Grass, Ice"
         case "rock":
-            return "water, grass, ice"
+            return "Water, Grass, Ice"
         case "bug":
-            return "flying, rock, fire"
+            return "Flying, Rock, Fire"
         case "ghost":
-            return "ghost, dark"
+            return "Ghost, Dark"
         case "steel":
-            return "fighting, fire, poison"
+            return "Fighting, Fire, Poison"
         case "fire":
-            return "ground, rock, water"
+            return "Ground, Rock, Water"
         case "water":
-            return "grass, electric"
+            return "Grass, Electric"
         case "grass":
-            return "flying, poison, bug, fire, ice"
+            return "Flying, Poison, Bug, Fire, Ice"
         case "electric":
-            return "ground"
+            return "Ground"
         case "psychic":
-            return "bug, ghost, dark"
+            return "Bug, Ghost, Dark"
         case "ice":
-            return "fighting, rock, steel, fire"
+            return "Fighting, Rock, Steel, Fire"
         case "dragon":
-            return "ice, dragon, fairy"
+            return "Ice, Dragon, Fairy"
         case "dark":
-            return "fighting, bug, fairy"
+            return "Fighting, Bug, Fairy"
         case "fairy":
-            return "poison, ghost, dragon"
+            return "Poison, Ghost, Dragon"
         default:
             return ""
     }

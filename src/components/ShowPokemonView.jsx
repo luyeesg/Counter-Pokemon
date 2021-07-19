@@ -1,8 +1,9 @@
 import React from "react";
 import "./styles/showpokemonview.css";
-import { getCounter } from "./counter";
+import {getCounter} from "./counter"
 
 const ShowPokemonView = ({ pokemon }) => {
+
   return (
     <div className="show-pokemon">
       <h2 className="show-title">{pokemon.name}</h2>
