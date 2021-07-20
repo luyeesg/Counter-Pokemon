@@ -14,7 +14,7 @@ const App = () => {
               <Route exact path="/">
                 <Pokedex />
               </Route>
-              <Route path="/pokemonview">
+              <Route path="/pokemonview/:pokemon">
                 <PokemonView />
               </Route>
             </Switch>

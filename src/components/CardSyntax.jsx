@@ -15,7 +15,7 @@ const CardSyntax = ({ pokemon }) => {
 
   return (
     <div className="pokemon" onClick={handleOnClick}>
-      <Link to={`/pokemonview`}>
+      <Link to={`/pokemonview/${pokemon.name}`}>
         <h2 className="title">{pokemon.name}</h2>
         <div className="pokemon-img-container">
           <img
