@@ -16,11 +16,11 @@ const PokemonView = () => {
   }, [pokemonView]);
 
   return (
-    <div className="show-container">
+    <>
       {pokemon.map((poke, i) => (
        <ShowPokemonView pokemon={poke} key={i}/>
       ))}
-    </div>
+    </>
   );
 };
 

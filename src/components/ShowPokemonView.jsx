@@ -1,9 +1,8 @@
 import React from "react";
 import "./styles/showpokemonview.css";
-import {getCounter} from "./counter"
+import { getCounter } from "./counter";
 
 const ShowPokemonView = ({ pokemon }) => {
-
   return (
     <div className="show-pokemon">
       <h2 className="show-title">{pokemon.name}</h2>
@@ -15,19 +14,20 @@ const ShowPokemonView = ({ pokemon }) => {
           className="show-pokemon-img"
         />
       </div>
+      <p className="show-pokemon-id">#{pokemon.id}</p>
       <div className="show-pokemon-types">
-        <p className="show-types">{pokemon.types[0].type.name}</p>
+        <span className="show-types">{pokemon.types[0].type.name}</span>
         {pokemon.types.length > 1 ? (
-          <p className="show-types">{pokemon.types[1].type.name}</p>
+          <span className="show-types">{pokemon.types[1].type.name}</span>
         ) : (
           <span></span>
         )}
-        <div className="show-counter">
-          <h2>
-            {pokemon.name} is weak against{" "}
-            {getCounter(pokemon.types[0].type.name)}
-          </h2>
-        </div>
+      </div>
+      <div className="show-counter-container">
+        <h2 className="show-counter">
+          {pokemon.name} is weak against{" "}
+          {getCounter(pokemon.types[0].type.name)}
+        </h2>
       </div>
     </div>
   );
