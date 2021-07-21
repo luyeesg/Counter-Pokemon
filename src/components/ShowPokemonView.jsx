@@ -3,8 +3,11 @@ import "./styles/showpokemonview.css";
 import { getCounter } from "./counter";
 
 const ShowPokemonView = ({ pokemon }) => {
+
+  const type = pokemon.types[0].type.name
+
   return (
-    <div className="show-pokemon">
+    <div className={`show-pokemon ${type}`}>
       <h2 className="show-title">{pokemon.name}</h2>
       <div className="show-pokemon-img-container">
         <img

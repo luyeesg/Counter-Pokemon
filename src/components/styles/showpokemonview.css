@@ -2,6 +2,12 @@
  padding-top: 20px;
  font-size: 30px;
  text-transform: capitalize;
+ color: white;
+}
+
+.show-pokemon {
+ padding-top: 20px;
+ padding-bottom: 490px;
 }
 
 .show-pokemon-img-container {
@@ -16,6 +22,7 @@
 .show-pokemon-id {
  font-size: 25px;
  font-weight: 500;
+ color: white;
 }
 
 .show-pokemon-types {
@@ -37,4 +44,5 @@
 
 .show-counter {
  text-transform: uppercase;
+ color: white;
 }
