@@ -19,7 +19,7 @@ const CardSyntax = ({ pokemon }) => {
         <h2 className="title">{pokemon.name}</h2>
         <div className="pokemon-img-container">
           <img
-            src={pokemon.sprites.front_default}
+            src={pokemon.sprites.other["official-artwork"].front_default}
             alt={pokemon.name}
             title={pokemon.name}
             className="pokemon-img"
