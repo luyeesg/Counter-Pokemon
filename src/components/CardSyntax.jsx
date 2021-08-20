@@ -10,10 +10,12 @@ const CardSyntax = ({ pokemon }) => {
   // pokemonView takes the pokemon name and save it to fetch it in PokemonView Component
   const [pokemonView, setPokemonView] = useContext(PokemonContext);
   const [searchTerm, setSearchTerm] = useContext(SearchContext);
+  const type = pokemon.types[0].type.name;
+  const type2 = pokemon.types.length > 1 ? pokemon.types[1].type.name : "";
 
   const handleOnClick = () => {
     setPokemonView(pokemon.name);
-    setSearchTerm("")
+    setSearchTerm("");
   };
 
   return (
@@ -29,9 +31,9 @@ const CardSyntax = ({ pokemon }) => {
           />
         </div>
         <div className="pokemon-types">
-          <p className="types">{pokemon.types[0].type.name}</p>
+          <p className={`types ${type}`}>{type}</p>
           {pokemon.types.length > 1 ? (
-            <p className="types">{pokemon.types[1].type.name}</p>
+            <p className={`types ${type2}`}>{pokemon.types[1].type.name}</p>
           ) : (
             <span></span>
           )}

@@ -15,3 +15,21 @@
 .search:focus {
  outline: none;
 }
+
+@media (max-width: 830px) {
+ .search {
+  width: 30rem;
+ }
+}
+
+@media (max-width: 520px) {
+ .search {
+  width: 20rem;
+ }
+}
+
+@media (max-width: 323px) {
+ .search {
+  width: 15rem;
+ }
+}

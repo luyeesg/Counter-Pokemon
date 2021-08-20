@@ -54,7 +54,11 @@
   .show-pokemon-img {
     width: 350px;
   }
-  .show-pokemon {
-    padding-top: 70px;
+}
+
+@media (max-width: 400px) {
+  .show-pokemon-img {
+    width: 280px;
   }
 }
+

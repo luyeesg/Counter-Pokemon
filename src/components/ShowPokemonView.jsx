@@ -18,9 +18,9 @@ const ShowPokemonView = ({ pokemon }) => {
         />
       </div>
       <div className="show-pokemon-types">
-        <span className="show-types">{pokemon.types[0].type.name}</span>
+        <span className={`show-types`}>{type}</span>
         {pokemon.types.length > 1 ? (
-          <span className="show-types">{pokemon.types[1].type.name}</span>
+          <span className={`show-types`}>{pokemon.types[1].type.name}</span>
         ) : (
           <span></span>
         )}
@@ -28,7 +28,7 @@ const ShowPokemonView = ({ pokemon }) => {
       <div className="show-counter-container">
         <h2 className="show-counter">
           {pokemon.name} is weak against{" "}
-          {getCounter(pokemon.types[0].type.name)}
+          {getCounter(type)}
         </h2>
       </div>
     </div>

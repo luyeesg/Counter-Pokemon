@@ -20,6 +20,7 @@ a {
 }
 
 .types {
+ color: white;
  font-weight: 500;
  font-size: 25px;
  text-transform: capitalize;
@@ -34,7 +35,7 @@ a {
 }
 
 .grass {
- background-color: #62D5B4;
+ background-color: #36BA94;
 }
 
 .water {
@@ -46,7 +47,7 @@ a {
 }
 
 .flying {
- background-color: #CFCFFA;
+ background-color: #8686DE;
 }
 
 .bug {
@@ -62,11 +63,11 @@ a {
 }
 
 .poison {
- background-color: #7C7CAA;
+ background-color: #7F67BF;
 }
 
 .normal {
- background-color: #DDC49E;
+ background-color: #E6BE81;
 }
 
 .fighting {
@@ -74,7 +75,7 @@ a {
 }
 
 .psychic {
- background-color: #D0BD3F;
+ background-color: #DB4AC5;
 }
 
 .rock {
@@ -82,13 +83,17 @@ a {
 }
 
 .ice {
- background-color: #30628A;
+ background-color: #367CA8;
 }
 
 .dragon {
- background-color: #CE7847;
+ background-color: #CEC447;
 }
 
 .fairy {
- background-color: rgb(250, 219, 178);
+ background-color: #C94B94;
+}
+
+.steel {
+ background-color: #BFBFBF;
 }
