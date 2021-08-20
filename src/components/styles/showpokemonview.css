@@ -20,8 +20,9 @@
 }
 
 .show-pokemon-id {
+  margin-top: 10px;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 500;
   color: white;
 }
 
