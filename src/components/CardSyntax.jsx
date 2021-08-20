@@ -2,15 +2,18 @@ import React, { useContext } from "react";
 import { PokemonContext } from "../context/PokemonContext";
 import "./styles/cardsyntax.css";
 import { Link } from "react-router-dom";
+import { SearchContext } from "../context/SearchContext";
 
 // CardSyntax Components show the way the data should be display
 
 const CardSyntax = ({ pokemon }) => {
   // pokemonView takes the pokemon name and save it to fetch it in PokemonView Component
   const [pokemonView, setPokemonView] = useContext(PokemonContext);
+  const [searchTerm, setSearchTerm] = useContext(SearchContext);
 
   const handleOnClick = () => {
     setPokemonView(pokemon.name);
+    setSearchTerm("")
   };
 
   return (

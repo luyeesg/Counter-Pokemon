@@ -1,15 +1,12 @@
 
 body {
  text-align: center;
+ background-color: #EFEFEF;
 }
 
 a {
  color: inherit;
  text-decoration: inherit;
-}
-
-.app {
- background-color: #EFEFEF;
 }
 
 .title {

@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import Cards from "./Cards";
-import "./styles/searchbar.css"
+import "./styles/searchbar.css";
+import { SearchContext } from "../context/SearchContext";
 
 // Pokedex Components fetch all the pokemon and send the data to Cards
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState([]);
+  const [searchTerm, setSearchTerm] = useContext(SearchContext);
 
   useEffect(() => {
     axios
@@ -14,8 +16,21 @@ const Pokedex = () => {
       .then((res) => setPokemon(res.data.results));
   }, []);
 
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+    e.preventDefault();
+  };
+
   return (
     <>
+      <div className="searchbar">
+        <input
+          type="text"
+          placeholder="Looking for a Pókemon?"
+          className="search"
+          onChange={handleOnChange}
+        />
+      </div>
       <div className="container">
         {pokemon.map((poke, i) => (
           <Cards pokemon={poke} key={i} />
