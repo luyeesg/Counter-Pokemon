@@ -30,6 +30,44 @@ a {
  background-color: white;
 }
 
+@keyframes slideInLeft {
+ from {
+   transform: translateX(-10rem);
+   opacity: 0;
+ }
+ to {
+   transform: translateX(0);
+ }
+}
+
+@keyframes slideInRight {
+ from {
+   transform: translateX(10rem);
+   opacity: 0;
+ }
+ to {
+   transform: translateX(0);
+ }
+}
+
+@keyframes out {
+ from {
+   opacity: 0;
+ }
+ to {
+ }
+}
+
+@keyframes bottomToTop {
+ from {
+   transform: translateY(100rem);
+   opacity: 0;
+ }
+ to {
+   transform: translateY(0);
+ }
+}
+
 .fire {
  background-color: #A33936;
 }

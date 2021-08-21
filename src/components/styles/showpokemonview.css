@@ -3,6 +3,7 @@
   font-size: 30px;
   text-transform: capitalize;
   color: white;
+  animation: 1s slideInLeft;
 }
 
 .show-pokemon {
@@ -17,6 +18,7 @@
 
 .show-pokemon-img {
   width: 450px;
+  animation: 1s bottomToTop;
 }
 
 .show-pokemon-id {
@@ -24,6 +26,7 @@
   font-size: 25px;
   font-weight: 500;
   color: white;
+  animation: 2s out;
 }
 
 .show-pokemon-types {
@@ -42,6 +45,7 @@
   margin-left: 10px;
   text-transform: capitalize;
   margin-top: 20px;
+  animation: 2s out;
 }
 
 .show-counter {
@@ -62,3 +66,40 @@
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes out {
+  from {
+    opacity: 0;
+  }
+  to {
+  }
+}
+
+@keyframes bottomToTop {
+  from {
+    transform: translateY(100rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}

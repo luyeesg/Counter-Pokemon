@@ -10,10 +10,19 @@
  border: none;
  font-size: 1.3rem;
  text-align: center;
+ animation: 1s out;
 }
 
 .search:focus {
  outline: none;
+}
+
+@keyframes out {
+ from {
+   opacity: 0;
+ }
+ to {
+ }
 }
 
 @media (max-width: 830px) {
