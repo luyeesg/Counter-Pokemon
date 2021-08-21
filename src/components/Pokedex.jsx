@@ -4,7 +4,7 @@ import Cards from "./Cards";
 import "./styles/searchbar.css";
 import { SearchContext } from "../context/SearchContext";
 
-// Pokedex Components fetch all the pokemon and send the data to Cards
+// Pokedex fetchea un array con todo los pokemon y envia la información al componente Cards
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -33,7 +33,7 @@ const Pokedex = () => {
       </div>
       <div className="container">
         {pokemon.map((poke, i) => (
-          <Cards pokemon={poke} key={i} />
+          <Cards pokemon={poke} key={i}/>
         ))}
       </div>
     </>

@@ -7,7 +7,7 @@ import ShowPokemonView from "./ShowPokemonView";
 
 const PokemonView = () => {
   const [pokemon, setPokemon] = useState([]);
-  const [pokemonView] = useContext(PokemonContext);
+  const [pokemonView, setPokemonView] = useContext(PokemonContext);
 
   useEffect(() => {
     axios

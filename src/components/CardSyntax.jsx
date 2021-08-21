@@ -4,23 +4,23 @@ import "./styles/cardsyntax.css";
 import { Link } from "react-router-dom";
 import { SearchContext } from "../context/SearchContext";
 
-// CardSyntax Components show the way the data should be display
+//CardSyntax toma la informacón de Cards, la organiza y la muestra
 
 const CardSyntax = ({ pokemon }) => {
-  // pokemonView takes the pokemon name and save it to fetch it in PokemonView Component
+  //pokemonView toma el nombre del pokemon y lo guarda para fetchear en PokemonView
   const [pokemonView, setPokemonView] = useContext(PokemonContext);
   const [searchTerm, setSearchTerm] = useContext(SearchContext);
   const type = pokemon.types[0].type.name;
   const type2 = pokemon.types.length > 1 ? pokemon.types[1].type.name : "";
 
   const handleOnClick = () => {
-    setPokemonView(pokemon.name);
+    setPokemonView(pokemon.name)
     setSearchTerm("");
   };
 
   return (
     <div className="pokemon" onClick={handleOnClick}>
-      <Link to={`/pokemonview/${pokemon.name}`}>
+      <Link to={`/view/${pokemon.name}`}>
         <h2 className="title">{pokemon.name}</h2>
         <div className="pokemon-img-container">
           <img

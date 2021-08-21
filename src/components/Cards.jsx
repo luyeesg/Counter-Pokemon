@@ -3,37 +3,34 @@ import axios from "axios";
 import CardSyntax from "./CardSyntax";
 import { SearchContext } from "../context/SearchContext";
 
-// Cards Components take the Pokedex data loop throught it to fetch it again
-// and send it to CardSyntax 
+//Cards toma la información de Pokedex y la fetchea de nuevo, la guarda en un array y la envia a CardSyntax
 
-const Cards = ({pokemon}) => {
-
- const [allPokemon] = useState([pokemon.url]);
- const [showPokemon, setShowPokemon] = useState([])
- const [searchTerm, setSearchTerm] = useContext(SearchContext);
+const Cards = ({ pokemon }) => {
+  const [allPokemon] = useState([pokemon.url]);
+  const [showPokemon, setShowPokemon] = useState([]);
+  const [searchTerm] = useContext(SearchContext);
 
   useEffect(() => {
-    allPokemon.map((poke) => (
-      axios.get(`${poke}`)
-      .then(res => setShowPokemon([res.data]))
-    ))
+    allPokemon.map((poke) =>
+      axios.get(`${poke}`).then((res) => setShowPokemon([res.data]))
+    );
   }, [allPokemon]);
 
- return (
-  <>
-   {
-     showPokemon.filter((p) => {
-      if (searchTerm === "") {
-       return <CardSyntax pokemon={p} key={p}/>
-      } else if (p.name.toLowerCase().includes(searchTerm.toLowerCase())) {
-       return <CardSyntax pokemon={p} key={p}/>
-      }
-     }).map((p, i) => (
-       <CardSyntax pokemon={p} key={i}/>
-     ))
-   }
-  </>
- )
-}
+  return (
+    <>
+      {showPokemon
+        .filter((p) => {
+          if (searchTerm === "") {
+            return <CardSyntax pokemon={p} key={p} />;
+          } else if (p.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+            return <CardSyntax pokemon={p} key={p} />;
+          }
+        })
+        .map((p, i) => (
+          <CardSyntax pokemon={p} key={i} />
+        ))}
+    </>
+  );
+};
 
-export default Cards
+export default Cards;

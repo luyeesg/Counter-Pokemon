@@ -6,6 +6,7 @@ import PokemonView from "./components/PokemonView";
 import SearchProvider from "./context/SearchContext";
 
 const App = () => {
+
   return (
     <>
       <div className="app">
@@ -16,7 +17,7 @@ const App = () => {
                 <Route exact path="/">
                   <Pokedex />
                 </Route>
-                <Route path="/pokemonview/:pokemon">
+                <Route path="/view/:pokemon">
                   <PokemonView />
                 </Route>
               </Switch>
