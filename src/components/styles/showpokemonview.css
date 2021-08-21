@@ -7,8 +7,9 @@
 }
 
 .show-pokemon {
-  padding-top: 30px;
-  padding-bottom: 500px;
+  padding-top: 80px;
+  /* padding-bottom: 500px; */
+  height:100vh
 }
 
 .show-pokemon-img-container {
