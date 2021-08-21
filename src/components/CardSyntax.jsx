@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { PokemonContext } from "../context/PokemonContext";
 import "./styles/cardsyntax.css";
 import { Link } from "react-router-dom";
 import { SearchContext } from "../context/SearchContext";
@@ -7,14 +6,11 @@ import { SearchContext } from "../context/SearchContext";
 //CardSyntax toma la informacón de Cards, la organiza y la muestra
 
 const CardSyntax = ({ pokemon }) => {
-  //pokemonView toma el nombre del pokemon y lo guarda para fetchear en PokemonView
-  const [pokemonView, setPokemonView] = useContext(PokemonContext);
   const [searchTerm, setSearchTerm] = useContext(SearchContext);
   const type = pokemon.types[0].type.name;
   const type2 = pokemon.types.length > 1 ? pokemon.types[1].type.name : "";
 
   const handleOnClick = () => {
-    setPokemonView(pokemon.name)
     setSearchTerm("");
   };
 

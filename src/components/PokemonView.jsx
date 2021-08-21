@@ -1,19 +1,20 @@
-import React, { useContext, useEffect, useState } from "react";
-import { PokemonContext } from "../context/PokemonContext";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ShowPokemonView from "./ShowPokemonView";
+import { useParams } from "react-router";
 
 // PokemonView fetch the pokemon name to display it in a new view
 
 const PokemonView = () => {
   const [pokemon, setPokemon] = useState([]);
-  const [pokemonView, setPokemonView] = useContext(PokemonContext);
+  // Params toma el nombre del pokemon desde el url del pokemon al que entramos
+  const params = useParams()
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon/${pokemonView}`)
+      .get(`https://pokeapi.co/api/v2/pokemon/${params.pokemon}`)
       .then((res) => setPokemon([res.data]));
-  }, [pokemonView]);
+  }, [params.pokemon]);
 
   return (
     <>
