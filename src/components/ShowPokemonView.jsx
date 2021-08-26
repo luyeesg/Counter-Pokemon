@@ -4,6 +4,7 @@ import { getCounter } from "./counter";
 
 const ShowPokemonView = ({ pokemon }) => {
   const type = pokemon.types[0].type.name;
+  const type2 = pokemon.types.length > 1 ? pokemon.types[1].type.name : "";
 
   return (
     <div className={`show-pokemon ${type}`}>
@@ -18,9 +19,9 @@ const ShowPokemonView = ({ pokemon }) => {
         />
       </div>
       <div className="show-pokemon-types">
-        <span className={`show-types`}>{type}</span>
+        <span className={`show-types show-${type}`}>{type}</span>
         {pokemon.types.length > 1 ? (
-          <span className={`show-types`}>{pokemon.types[1].type.name}</span>
+          <span className={`show-types show-${type2}`}>{pokemon.types[1].type.name}</span>
         ) : (
           <span></span>
         )}
