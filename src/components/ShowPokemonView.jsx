@@ -31,12 +31,18 @@ const ShowPokemonView = ({ pokemon }) => {
       </div>
       <div className="show-counter-container">
         <div className="show-counter">
-          <h3 className="show-effectiness">Super Effective</h3>
-          {superEffective(type, type2)}
-          <h3 className="show-effectiness">Effective</h3>
-          {Effective(type, type2)}
-          <h3 className="show-effectiness">Immute</h3>
-          {Immute(type, type2)}
+          <div className="show-super-effective">
+            <h3 className="show-effectiness">Super Effective</h3>
+            {superEffective(type, type2)}
+          </div>
+          <div className="show-effective">
+            <h3 className="show-effectiness">Effective</h3>
+            {Effective(type, type2)}
+          </div>
+          <div className="show-immute">
+            <h3 className="show-effectiness">Immute</h3>
+            {Immute(type, type2)}
+          </div>
         </div>
       </div>
     </div>

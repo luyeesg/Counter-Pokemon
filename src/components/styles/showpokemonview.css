@@ -8,7 +8,7 @@
 
 .show-pokemon {
   padding: 80px 0 20px 0;
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 .show-pokemon-img-container {
@@ -36,7 +36,7 @@
   width: 240px;
   text-align: center;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 25px;
   padding: 20px 80px;
   border-radius: 50px;
@@ -53,9 +53,18 @@
 }
 
 .show-effectiness {
+  font-family: "Roboto";
   font-size: 28px;
   text-transform: capitalize;
-  margin: 15px 0;
+  margin: 8px 0;
+}
+
+.show-effective,
+.show-super-effective,
+.show-immute {
+  margin: auto;
+  width: 700px;
+  height: auto;
 }
 
 .black {
@@ -114,72 +123,72 @@
 
 .show-fire {
   background-color: #9c130e;
- }
- 
- .show-grass {
-  background-color: #23a781;
- }
- 
- .show-water {
+}
+
+.show-grass {
+  background-color: #8dc560;
+}
+
+.show-water {
   background-color: #13385f;
- }
- 
- .show-ghost {
+}
+
+.show-ghost {
   background-color: #5620ad;
- }
- 
- .show-flying {
+}
+
+.show-flying {
   background-color: #7979ca;
- }
- 
- .show-bug {
+}
+
+.show-bug {
   background-color: #74ac34;
- }
- 
- .show-electric {
+}
+
+.show-electric {
   background-color: #ebb01d;
- }
- 
- .show-ground {
-  background-color: #ce8e0d;
- }
- 
- .show-poison {
+}
+
+.show-ground {
+  background-color: #DAC175;
+}
+
+.show-poison {
   background-color: #5932c4;
- }
- 
- .show-normal {
+}
+
+.show-normal {
   background-color: #d1a562;
- }
- 
- .show-fighting {
+}
+
+.show-fighting {
   background-color: #a03e18;
- }
- 
- .show-psychic {
+}
+
+.show-psychic {
   background-color: #b63ca3;
- }
- 
- .show-rock {
+}
+
+.show-rock {
   background-color: #8a8875;
- }
- 
- .show-ice {
+}
+
+.show-ice {
   background-color: #1d6796;
- }
- 
- .show-dragon {
+}
+
+.show-dragon {
   background-color: #c2b71f;
- }
- 
- .show-fairy {
-  background-color: #b62479;
- }
- 
- .show-steel {
+}
+
+.show-fairy {
+  background-color: #c94b94;
+}
+
+.show-steel {
   background-color: #858585;
- }
- 
- .show-dark {
-   background-color: rgb(48, 48, 48);
- }
+}
+
+.show-dark {
+  background-color: rgb(48, 48, 48);
+}

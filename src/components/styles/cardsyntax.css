@@ -1,22 +1,21 @@
-
 body {
   text-align: center;
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 a {
- color: inherit;
- text-decoration: inherit;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .title {
- margin-top: 20px;
- font-size: 30px;
- text-transform: capitalize;
+  margin-top: 20px;
+  font-size: 30px;
+  text-transform: capitalize;
 }
 
 .pokemon-img {
- width: 250px;
+  width: 250px;
 }
 
 .pokemon-img:hover {
@@ -24,120 +23,120 @@ a {
 }
 
 .types {
- color: white;
- font-weight: 500;
- font-size: 25px;
- text-transform: capitalize;
- padding: 20px 80px;
- margin-bottom: 20px;
- border-radius: 60px;
- background-color: white;
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
+  text-transform: capitalize;
+  padding: 20px 80px;
+  margin-bottom: 20px;
+  border-radius: 60px;
+  background-color: white;
 }
 
 @keyframes slideInLeft {
- from {
-   transform: translateX(-10rem);
-   opacity: 0;
- }
- to {
-   transform: translateX(0);
- }
+  from {
+    transform: translateX(-10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInRight {
- from {
-   transform: translateX(10rem);
-   opacity: 0;
- }
- to {
-   transform: translateX(0);
- }
+  from {
+    transform: translateX(10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes out {
- from {
-   opacity: 0;
- }
- to {
- }
+  from {
+    opacity: 0;
+  }
+  to {
+  }
 }
 
 @keyframes bottomToTop {
- from {
-   transform: translateY(100rem);
-   opacity: 0;
- }
- to {
-   transform: translateY(0);
- }
+  from {
+    transform: translateY(100rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .fire {
- background-color: #A33936;
+  background-color: #DF8544;
 }
 
 .grass {
- background-color: #36BA94;
+  background-color: #36ba94;
 }
 
 .water {
- background-color: #0F2A47;
+  background-color: #0f2a47;
 }
 
 .ghost {
- background-color: #6F33CE;
+  background-color: #6f33ce;
 }
 
 .flying {
- background-color: #8686DE;
+  background-color: #8686de;
 }
 
 .bug {
- background-color: #93C25C;
+  background-color: #93c25c;
 }
 
 .electric {
- background-color: #F3C242;
+  background-color: #f3c242;
 }
 
 .ground {
- background-color: #9E7E3D;
+  background-color: #9e7e3d;
 }
 
 .poison {
- background-color: #7F67BF;
+  background-color: #7f67bf;
 }
 
 .normal {
- background-color: #E6BE81;
+  background-color: #e6be81;
 }
 
 .fighting {
- background-color: #C45122;
+  background-color: #c45122;
 }
 
 .psychic {
- background-color: #DB4AC5;
+  background-color: #db4ac5;
 }
 
 .rock {
- background-color: #B6B49C;
+  background-color: #b6b49c;
 }
 
 .ice {
- background-color: #367CA8;
+  background-color: #367ca8;
 }
 
 .dragon {
- background-color: #CEC447;
+  background-color: #cec447;
 }
 
 .fairy {
- background-color: #C94B94;
+  background-color: #E09DAC;
 }
 
 .steel {
- background-color: #BFBFBF;
+  background-color: #bfbfbf;
 }
 
 .dark {
