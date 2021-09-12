@@ -268,7 +268,7 @@ const Effective = (type, type2) => {
     return (
       <>
         <span className="show-types show-steel">Steel</span>
-        <span className="show-types show-poision">Poison</span>
+        <span className="show-types show-poison">Poison</span>
       </>
     );
   } else if (type === "fighting" && type2 === "") {
