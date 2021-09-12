@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/showpokemonview.css";
-import { getCounter } from "./counter";
+// import { getCounter } from "./counter";
+import { superEffective, Effective, Immute } from "./counter";
 
 const ShowPokemonView = ({ pokemon }) => {
   const type = pokemon.types[0].type.name;
@@ -21,16 +22,22 @@ const ShowPokemonView = ({ pokemon }) => {
       <div className="show-pokemon-types">
         <span className={`show-types show-${type}`}>{type}</span>
         {pokemon.types.length > 1 ? (
-          <span className={`show-types show-${type2}`}>{pokemon.types[1].type.name}</span>
+          <span className={`show-types show-${type2}`}>
+            {pokemon.types[1].type.name}
+          </span>
         ) : (
           <span></span>
         )}
       </div>
       <div className="show-counter-container">
-        <h2 className="show-counter">
-          {pokemon.name} is weak against{" "}
-          {getCounter(type)}
-        </h2>
+        <div className="show-counter">
+          <h3 className="show-effectiness">Super Effective</h3>
+          {superEffective(type, type2)}
+          <h3 className="show-effectiness">Effective</h3>
+          {Effective(type, type2)}
+          <h3 className="show-effectiness">Immute</h3>
+          {Immute(type, type2)}
+        </div>
       </div>
     </div>
   );
