@@ -1,296 +1,428 @@
-// Types Super Effective 
+// Types Super Effective
 
 const superEffective = (type, type2) => {
-  if (type === "grass" && type2 === "poison") {
+  if (type === "grass" && type2 === "psychic") {
     return (
       <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "fire" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Bug</span>
       </>
     );
   } else if (type === "fire" && "flying") {
     return (
       <>
-        <span className="show-types show-rock">Rock</span>
-      </>
-    );
-  } else if (type === "water" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "water" && type2 === "fighting") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "bug" && type2 === "flying") {
     return (
       <>
-        <span className="show-types show-rock">Rock</span>
-      </>
-    );
-  } else if (type === "bug" && type2 === "poison") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "bug" && type2 === "grass") {
     return (
       <>
-        <span className="show-types show-fire">Fire</span>
-        <span className="show-types show-flying">Flying</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Flying</span>
       </>
     );
-  } else if (type === "normal" && type2 === "") {
+  } else if (type === "electric" && type2 === "steel") {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Ground</span>
       </>
     );
-  } else if (type === "normal" && type2 === "flying") {
+  } else if (
+    (type === "rock" && type2 === "ground") ||
+    (type === "ground" && type2 === "rock")
+  ) {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Grass</span>
+        <span className="show-types">Water</span>
       </>
     );
-  } else if (type === "normal" && type2 === "fairy") {
+  } else if (type === "rock" && type2 === "water") {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Grass</span>
       </>
     );
-  } else if (type === "poison" && type2 === "") {
+  } else if (type === "ice" && type2 === "flying") {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Rock</span>
       </>
     );
-  } else if (type === "poison" && type2 === "ground") {
+  } else if (type === "dragon" && type2 === "flying") {
     return (
       <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "poison" && type2 === "flying") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "electric" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "ground" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "fairy" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "fighting" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "psychic" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Ice</span>
       </>
     );
   } else {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <span></span>
       </>
     );
   }
 };
 
-// Types Effective 
+// Types Effective
 
 const Effective = (type, type2) => {
-  if (type === "grass" && type2 === "poison") {
+  if (type === "grass" && type2 === "") {
     return (
       <>
-        <span className="show-types show-fire">Fire</span>
-        <span className="show-types show-flying">Flying</span>
-        <span className="show-types show-psychic">Psychic</span>
-        <span className="show-types show-ice">Ice</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Poison</span>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Bug</span>
+      </>
+    );
+  } else if (type === "grass" && type2 === "poison") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Psychic</span>
+        <span className="show-types">Ice</span>
+      </>
+    );
+  } else if (type === "grass" && type2 === "psychic") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Poison</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Ghost</span>
       </>
     );
   } else if (type === "fire" && type2 === "") {
     return (
       <>
-        <span className="show-types show-water">Water</span>
-        <span className="show-types show-ground">Ground</span>
-        <span className="show-types show-rock">Rock</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Water</span>
+        <span className="show-types">Ground</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "fire" && type2 === "flying") {
     return (
       <>
-        <span className="show-types show-electric">Electric</span>
-        <span className="show-types show-water">Water</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Water</span>
       </>
     );
   } else if (type === "water" && type2 === "") {
     return (
       <>
-        <span className="show-types show-electric">Electric</span>
-        <span className="show-types show-grass">Grass</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Grass</span>
       </>
     );
   } else if (type === "water" && type2 === "fighting") {
     return (
       <>
-        <span className="show-types show-electric">Electric</span>
-        <span className="show-types show-grass">Grass</span>
-        <span className="show-types show-flying">Flying</span>
-        <span className="show-types show-fairy">Fairy</span>
-        <span className="show-types show-psychic">Psychic</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Grass</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Fairy</span>
+        <span className="show-types">Psychic</span>
+      </>
+    );
+  } else if (type === "water" && type2 === "poison") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Psychic</span>
+        <span className="show-types">Ground</span>
+      </>
+    );
+  } else if (type === "water" && type2 === "psychic") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Grass</span>
+        <span className="show-types">Dark</span>
+        <span className="show-types">Bug</span>
+        <span className="show-types">Ghost</span>
+      </>
+    );
+  } else if (type === "water" && type2 === "ice") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Grass</span>
+        <span className="show-types">Fighting</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "bug" && type2 === "") {
     return (
       <>
-        <span className="show-types show-fire">Fire</span>
-        <span className="show-types show-flying">Flying</span>
-        <span className="show-types show-rock">Rock</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "bug" && type2 === "flying") {
     return (
       <>
-        <span className="show-types show-electric">Electric</span>
-        <span className="show-types show-fire">Fire</span>
-        <span className="show-types show-flying">Flying</span>
-        <span className="show-types show-ice">Ice</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Ice</span>
       </>
     );
   } else if (type === "bug" && type2 === "poison") {
     return (
       <>
-        <span className="show-types show-fire">Fire</span>
-        <span className="show-types show-flying">Flying</span>
-        <span className="show-types show-psychic">Psychic</span>
-        <span className="show-types show-rock">Rock</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Psychic</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "bug" && type2 === "grass") {
     return (
       <>
-        <span className="show-types show-poison">Poison</span>
-        <span className="show-types show-ice">Ice</span>
-        <span className="show-types show-bug">Bug</span>
-        <span className="show-types show-rock">Rock</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Poison</span>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Bug</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "normal" && type2 === "") {
     return (
       <>
-        <span className="show-types show-fighting">Fighting</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fighting</span>
       </>
     );
   } else if (type === "normal" && type2 === "flying") {
     return (
       <>
-        <span className="show-types show-electric">Electric</span>
-        <span className="show-types show-ice">Ice</span>
-        <span className="show-types show-rock">Rock</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "normal" && type2 === "fairy") {
     return (
       <>
-        <span className="show-types show-steel">Steel</span>
-        <span className="show-types show-poison">Poison</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Poison</span>
       </>
     );
   } else if (type === "poison" && type2 === "") {
     return (
       <>
-        <span className="show-types show-psychic">Psychic</span>
-        <span className="show-types show-ground">Ground</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Psychic</span>
+        <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "poison" && type2 === "ground") {
     return (
       <>
-        <span className="show-types show-water">Water</span>
-        <span className="show-types show-psychic">Psychic</span>
-        <span className="show-types show-ice">Ice</span>
-        <span className="show-types show-ground">Ground</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Water</span>
+        <span className="show-types">Psychic</span>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "poison" && type2 === "flying") {
     return (
       <>
-        <span className="show-types show-electric">Electric</span>
-        <span className="show-types show-psychic">Psychic</span>
-        <span className="show-types show-ice">Ice</span>
-        <span className="show-types show-rock">Rock</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Psychic</span>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "electric" && type2 === "") {
     return (
       <>
-        <span className="show-types show-ground">Ground</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Ground</span>
+      </>
+    );
+  } else if (type === "electric" && type2 === "steel") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Fighting</span>
+      </>
+    );
+  } else if (type === "electric" && type2 === "flying") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "ground" && type2 === "") {
     return (
       <>
-        <span className="show-types show-grass">Grass</span>
-        <span className="show-types show-water">Water</span>
-        <span className="show-types show-ice">Ice</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Grass</span>
+        <span className="show-types">Water</span>
+        <span className="show-types">Ice</span>
       </>
     );
   } else if (type === "fairy" && type2 === "") {
     return (
       <>
-        <span className="show-types show-steel">Steel</span>
-        <span className="show-types show-poison">Poison</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Poison</span>
       </>
     );
   } else if (type === "fighting" && type2 === "") {
     return (
       <>
-        <span className="show-types show-flying">Flying</span>
-        <span className="show-types show-fairy">Fairy</span>
-        <span className="show-types show-psychic">Psychic</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Fairy</span>
+        <span className="show-types">Psychic</span>
       </>
     );
   } else if (type === "psychic" && type2 === "") {
     return (
       <>
-        <span className="show-types show-dark">Dark</span>
-        <span className="show-types show-bug">Bug</span>
-        <span className="show-types show-ghost">Ghost</span>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Dark</span>
+        <span className="show-types">Bug</span>
+        <span className="show-types">Ghost</span>
+      </>
+    );
+  } else if (type === "psychic" && type2 === "fairy") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Poison</span>
+        <span className="show-types">Ghost</span>
+      </>
+    );
+  } else if (
+    (type === "rock" && type2 === "ground") ||
+    (type === "ground" && type2 === "rock")
+  ) {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Ground</span>
+        <span className="show-types">Fighting</span>
+      </>
+    );
+  } else if (type === "rock" && type2 === "water") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Fighting</span>
+        <span className="show-types">Ground</span>
+      </>
+    );
+  } else if (type === "rock" && type2 === "flying") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Water</span>
+        <span className="show-types">Ice</span>
+        <span className="show-types">Rock</span>
+      </>
+    );
+  } else if (type === "ghost" && type2 === "poison") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Dark</span>
+        <span className="show-types">Psychic</span>
+        <span className="show-types">Ground</span>
+        <span className="show-types">Ghost</span>
+      </>
+    );
+  } else if (type === "ice" && type2 === "psychic") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Dark</span>
+        <span className="show-types">Bug</span>
+        <span className="show-types">Ghost</span>
+        <span className="show-types">Rock</span>
+      </>
+    );
+  } else if (type === "ice" && type2 === "flying") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Electric</span>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Fire</span>
+      </>
+    );
+  } else if (type === "dragon" && type2 === "") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Dragon</span>
+        <span className="show-types">Fairy</span>
+        <span className="show-types">Ice</span>
+      </>
+    );
+  } else if (type === "dragon" && type2 === "flying") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Dragon</span>
+        <span className="show-types">Fairy</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <span></span>
       </>
     );
   }
@@ -299,126 +431,135 @@ const Effective = (type, type2) => {
 //Type Immute
 
 const Immute = (type, type2) => {
-  if (type === "grass" && type2 === "poison") {
+  if (type === "fire" && "flying") {
     return (
       <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "fire" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "fire" && "flying") {
-    return (
-      <>
-        <span className="show-types show-ground">Ground</span>
-      </>
-    );
-  } else if (type === "water" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "water" && type2 === "fighting") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "bug" && type2 === "flying") {
     return (
       <>
-        <span className="show-types show-ground">Ground</span>
-      </>
-    );
-  } else if (type === "bug" && type2 === "poison") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
-      </>
-    );
-  } else if (type === "bug" && type2 === "grass") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "normal" && type2 === "") {
     return (
       <>
-        <span className="show-types show-ghost">Ghost</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ghost</span>
       </>
     );
   } else if (type === "normal" && type2 === "flying") {
     return (
       <>
-        <span className="show-types show-ground">Ground</span>
-        <span className="show-types show-ghost">Ghost</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ground</span>
+        <span className="show-types">Ghost</span>
       </>
     );
   } else if (type === "normal" && type2 === "fairy") {
     return (
       <>
-        <span className="show-types show-dragon">Dragon</span>
-        <span className="show-types show-ghost">Ghost</span>
-      </>
-    );
-  } else if (type === "poison" && type2 === "") {
-    return (
-      <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Dragon</span>
+        <span className="show-types">Ghost</span>
       </>
     );
   } else if (type === "poison" && type2 === "ground") {
     return (
       <>
-        <span className="show-types show-electric">Electric</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Electric</span>
       </>
     );
   } else if (type === "poison" && type2 === "flying") {
     return (
       <>
-        <span className="show-types show-ground">Ground</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ground</span>
       </>
     );
-  } else if (type === "electric" && type2 === "") {
+  } else if (type === "electric" && type2 === "steel") {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Poison</span>
+      </>
+    );
+  } else if (type === "electric" && type2 === "flying") {
+    return (
+      <>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "ground" && type2 === "") {
     return (
       <>
-        <span className="show-types show-electric">Electric</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Electric</span>
       </>
     );
   } else if (type === "fairy" && type2 === "") {
     return (
       <>
-        <span className="show-types show-dragon">Dragon</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Dragon</span>
       </>
     );
-  } else if (type === "fighting" && type2 === "") {
+  } else if (type === "psychic" && type2 === "fairy") {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Dragon</span>
       </>
     );
-  } else if (type === "psychic" && type2 === "") {
+  } else if (
+    (type === "rock" && type2 === "ground") ||
+    (type === "ground" && type2 === "rock")
+  ) {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Electric</span>
+      </>
+    );
+  } else if (type === "rock" && type2 === "flying") {
+    return (
+      <>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ground</span>
+      </>
+    );
+  } else if (type === "ghost" && type2 === "poison") {
+    return (
+      <>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Normal</span>
+        <span className="show-types">Figthing</span>
+      </>
+    );
+  } else if (type === "ice" && type2 === "flying") {
+    return (
+      <>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ground</span>
+      </>
+    );
+  } else if (type === "dragon" && type2 === "flying") {
+    return (
+      <>
+        <h3 className="show-effectiness">Immute</h3>
+        <span className="show-types">Ground</span>
       </>
     );
   } else {
     return (
       <>
-        <span className="show-types black">Nothing</span>
+        <span></span>
       </>
     );
   }

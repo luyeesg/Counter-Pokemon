@@ -33,6 +33,10 @@ a {
   background-color: white;
 }
 
+.black {
+  color: black !important;
+}
+
 @keyframes slideInLeft {
   from {
     transform: translateX(-10rem);

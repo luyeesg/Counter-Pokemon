@@ -44,7 +44,7 @@
   text-transform: capitalize;
   margin: 15px 10px;
   animation: 2s out;
-  color: white;
+  color: black;
 }
 
 .show-counter {
@@ -65,10 +65,6 @@
   margin: auto;
   width: 700px;
   height: auto;
-}
-
-.black {
-  color: black;
 }
 
 @media (max-width: 502px) {
@@ -119,76 +115,4 @@
   to {
     transform: translateY(0);
   }
-}
-
-.show-fire {
-  background-color: #9c130e;
-}
-
-.show-grass {
-  background-color: #8dc560;
-}
-
-.show-water {
-  background-color: #13385f;
-}
-
-.show-ghost {
-  background-color: #5620ad;
-}
-
-.show-flying {
-  background-color: #7979ca;
-}
-
-.show-bug {
-  background-color: #74ac34;
-}
-
-.show-electric {
-  background-color: #ebb01d;
-}
-
-.show-ground {
-  background-color: #DAC175;
-}
-
-.show-poison {
-  background-color: #5932c4;
-}
-
-.show-normal {
-  background-color: #d1a562;
-}
-
-.show-fighting {
-  background-color: #a03e18;
-}
-
-.show-psychic {
-  background-color: #b63ca3;
-}
-
-.show-rock {
-  background-color: #8a8875;
-}
-
-.show-ice {
-  background-color: #1d6796;
-}
-
-.show-dragon {
-  background-color: #c2b71f;
-}
-
-.show-fairy {
-  background-color: #c94b94;
-}
-
-.show-steel {
-  background-color: #858585;
-}
-
-.show-dark {
-  background-color: rgb(48, 48, 48);
 }
