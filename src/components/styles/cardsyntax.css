@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #efefef;
+  background-color: #e6e6e6;
 }
 
 a {
@@ -12,6 +12,7 @@ a {
   margin-top: 20px;
   font-size: 30px;
   text-transform: capitalize;
+  color: black;
 }
 
 .pokemon-img {
@@ -24,7 +25,7 @@ a {
 
 .types {
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 25px;
   text-transform: capitalize;
   padding: 20px 80px;
