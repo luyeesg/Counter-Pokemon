@@ -565,4 +565,4 @@ const Immune = (type, type2) => {
   }
 };
 
-export { superEffective, Effective, Immute };
+export { superEffective, Effective, Immune };
