@@ -430,32 +430,32 @@ const Effective = (type, type2) => {
 
 //Type Immute
 
-const Immute = (type, type2) => {
+const Immune = (type, type2) => {
   if (type === "fire" && "flying") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "bug" && type2 === "flying") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "normal" && type2 === "") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ghost</span>
       </>
     );
   } else if (type === "normal" && type2 === "flying") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ground</span>
         <span className="show-types">Ghost</span>
       </>
@@ -463,7 +463,7 @@ const Immute = (type, type2) => {
   } else if (type === "normal" && type2 === "fairy") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Dragon</span>
         <span className="show-types">Ghost</span>
       </>
@@ -471,49 +471,49 @@ const Immute = (type, type2) => {
   } else if (type === "poison" && type2 === "ground") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Electric</span>
       </>
     );
   } else if (type === "poison" && type2 === "flying") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "electric" && type2 === "steel") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Poison</span>
       </>
     );
   } else if (type === "electric" && type2 === "flying") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "ground" && type2 === "") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Electric</span>
       </>
     );
   } else if (type === "fairy" && type2 === "") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Dragon</span>
       </>
     );
   } else if (type === "psychic" && type2 === "fairy") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Dragon</span>
       </>
     );
@@ -523,21 +523,21 @@ const Immute = (type, type2) => {
   ) {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Electric</span>
       </>
     );
   } else if (type === "rock" && type2 === "flying") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "ghost" && type2 === "poison") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Normal</span>
         <span className="show-types">Figthing</span>
       </>
@@ -545,14 +545,14 @@ const Immute = (type, type2) => {
   } else if (type === "ice" && type2 === "flying") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ground</span>
       </>
     );
   } else if (type === "dragon" && type2 === "flying") {
     return (
       <>
-        <h3 className="show-effectiness">Immute</h3>
+        <h3 className="show-effectiness">Immune</h3>
         <span className="show-types">Ground</span>
       </>
     );

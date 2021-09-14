@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/showpokemonview.css";
-import { superEffective, Effective, Immute } from "./counter";
+import { superEffective, Effective, Immune } from "./counter";
 
 const ShowPokemonView = ({ pokemon }) => {
   const type = pokemon.types[0].type.name;
@@ -36,8 +36,8 @@ const ShowPokemonView = ({ pokemon }) => {
           <div className="show-effective">
             {Effective(type, type2)}
           </div>
-          <div className="show-immute">
-            {Immute(type, type2)}
+          <div className="show-immune">
+            {Immune(type, type2)}
           </div>
         </div>
       </div>

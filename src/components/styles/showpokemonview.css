@@ -62,7 +62,7 @@
 
 .show-effective,
 .show-super-effective,
-.show-immute {
+.show-immune {
   margin: auto;
   width: 700px;
   height: auto;
@@ -71,7 +71,7 @@
 @media (max-width: 700px) {
   .show-effective,
   .show-super-effective,
-  .show-immute {
+  .show-immune {
     margin: auto;
     width: auto;
     height: auto;
