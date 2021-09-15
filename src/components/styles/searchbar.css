@@ -6,11 +6,6 @@
   top: 0;
 }
 
-.searchbar:hover {
-  background-color: white;
-  padding: 0;
-}
-
 .search {
   border-radius: 6rem;
   width: 50rem;

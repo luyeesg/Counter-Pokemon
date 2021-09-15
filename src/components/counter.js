@@ -565,4 +565,32 @@ const Immune = (type, type2) => {
   }
 };
 
+// 2nd generation
+
+// water & electric - chinchou
+// water & fairy - marill
+// water & ground - wooper
+// water & psychic - slowking
+// water & rock - corsola
+// water & flying - mantine
+// water & dragon - kingdra
+// dark - umbreon
+// dark & flying - murkrow
+// dark & ice - sneasel
+// dark & fire - houndour
+// fairy & flying - togetic
+// psychic & flying - lugia
+// psychic & grass - celebi
+// grass & flying - hoppip
+// normal & psychic - girafarig
+// bug & steel - forretress
+// bug & rock - shuckle
+// bug & fighting - heracross
+// ground & flying - gligar
+// steel & ground - steelix
+// steel & flying - skarmory
+// fire & rock - magcargo
+// ice & ground - swinub
+// rock & dark - tyranitar
+
 export { superEffective, Effective, Immune };
