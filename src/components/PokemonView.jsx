@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import ShowPokemonView from "./ShowPokemonView";
 import { useParams } from "react-router";
@@ -8,7 +9,7 @@ import { useParams } from "react-router";
 const PokemonView = () => {
   const [pokemon, setPokemon] = useState([]);
   // Params toma el nombre del pokemon desde el url del pokemon al que entramos
-  const params = useParams()
+  const params = useParams();
 
   useEffect(() => {
     axios
@@ -18,8 +19,11 @@ const PokemonView = () => {
 
   return (
     <>
+      <Helmet>
+        <title>counterpokemon.com | {params.pokemon}</title>
+      </Helmet>
       {pokemon.map((poke, i) => (
-       <ShowPokemonView pokemon={poke} key={i}/>
+        <ShowPokemonView pokemon={poke} key={i} />
       ))}
     </>
   );
