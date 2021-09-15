@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import Cards from "./Cards";
 import "./styles/searchbar.css";
@@ -23,6 +24,9 @@ const Pokedex = () => {
 
   return (
     <>
+      <Helmet>
+        <title>counterpokemon.com</title>
+      </Helmet>
       <div className="searchbar">
         <input
           type="text"
@@ -33,7 +37,7 @@ const Pokedex = () => {
       </div>
       <div className="container">
         {pokemon.map((poke, i) => (
-          <Cards pokemon={poke} key={i}/>
+          <Cards pokemon={poke} key={i} />
         ))}
       </div>
     </>
