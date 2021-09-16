@@ -552,6 +552,17 @@ const Effective = (type, type2) => {
         <span className="show-types">Ghost</span>
       </>
     );
+  } else if (type === "rock" && type2 === "") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Grass</span>
+        <span className="show-types">Water</span>
+        <span className="show-types">Ground</span>
+        <span className="show-types">Fighting</span>
+      </>
+    );
   } else if (
     (type === "rock" && type2 === "ground") ||
     (type === "ground" && type2 === "rock")
