@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/showpokemonview.css";
-import { superEffective, Effective, Immune } from "./counter";
+import { superEffective } from "../data/supereffective"
+import { Effective } from "../data/effective"
+import { Immune } from "../data/immune"
 
 const ShowPokemonView = ({ pokemon }) => {
   const type = pokemon.types[0].type.name;
