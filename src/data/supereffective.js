@@ -39,6 +39,20 @@ const superEffective = (type, type2) => {
         <span className="show-types">Fire</span>
       </>
     );
+  } else if (type === "grass" && type2 === "fairy") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Poison</span>
+      </>
+    );
+  } else if (type === "grass" && type2 === "steel") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Fire</span>
+      </>
+    );
   } else if (type === "fire" && type2 === "flying") {
     return (
       <>
@@ -109,6 +123,13 @@ const superEffective = (type, type2) => {
       <>
         <h3 className="show-effectiness">Super Effective</h3>
         <span className="show-types">Flying</span>
+      </>
+    );
+  } else if (type === "bug" && type2 === "fire") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "ground" && type2 === "flying") {
@@ -182,6 +203,27 @@ const superEffective = (type, type2) => {
       <>
         <h3 className="show-effectiness">Super Effective</h3>
         <span className="show-types">Fighting</span>
+      </>
+    );
+  } else if (type === "dark" && type2 === "fighting") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Fairy</span>
+      </>
+    );
+  } else if (type === "dark" && type2 === "steel") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Fighting</span>
+      </>
+    );
+  } else if (type === "dark" && type2 === "fairy") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Fairy</span>
       </>
     );
   } else if (

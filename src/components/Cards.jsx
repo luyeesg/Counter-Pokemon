@@ -25,6 +25,7 @@ const Cards = ({ pokemon }) => {
           } else if (p.name.toLowerCase().includes(searchTerm.toLowerCase())) {
             return <CardSyntax pokemon={p} key={p} />;
           }
+          return false
         })
         .map((p, i) => (
           <CardSyntax pokemon={p} key={i} />
