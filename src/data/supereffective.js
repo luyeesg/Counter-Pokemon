@@ -184,6 +184,21 @@ const superEffective = (type, type2) => {
         <span className="show-types">Fighting</span>
       </>
     );
+  } else if (type === "rock" && type2 === "fairy") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Steel</span>
+      </>
+    );
+  } else if (type === "rock" && type2 === "ice") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Fighting</span>
+      </>
+    );
   } else if (type === "ice" && type2 === "flying") {
     return (
       <>
@@ -191,7 +206,10 @@ const superEffective = (type, type2) => {
         <span className="show-types">Rock</span>
       </>
     );
-  } else if (type === "dragon" && type2 === "flying") {
+  } else if (
+    (type === "dragon" && type2 === "flying") ||
+    (type === "flying" && type2 === "dragon")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Super Effective</h3>
@@ -205,7 +223,10 @@ const superEffective = (type, type2) => {
         <span className="show-types">Fighting</span>
       </>
     );
-  } else if (type === "dark" && type2 === "fighting") {
+  } else if (
+    (type === "dark" && type2 === "fighting") ||
+    (type === "dark" && type2 === "fighting")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Super Effective</h3>
@@ -226,6 +247,13 @@ const superEffective = (type, type2) => {
         <span className="show-types">Fairy</span>
       </>
     );
+  } else if (type === "dark" && type2 === "psychic") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Bug</span>
+      </>
+    );
   } else if (
     (type === "steel" && type2 === "rock") ||
     (type === "rock" && type2 === "steel")
@@ -242,6 +270,14 @@ const superEffective = (type, type2) => {
       <>
         <h3 className="show-effectiness">Super Effective</h3>
         <span className="show-types">Psychic</span>
+      </>
+    );
+  } else if (type === "psychic" && type2 === "ghost") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Dark</span>
+        <span className="show-types">Ghost</span>
       </>
     );
   } else {
