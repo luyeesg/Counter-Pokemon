@@ -20,7 +20,7 @@ const PokemonView = () => {
   return (
     <>
       <Helmet>
-        <title>counterpokemon.com | {params.pokemon}</title>
+        <title>{params.pokemon} | counterpokemon.com</title>
       </Helmet>
       {pokemon.map((poke, i) => (
         <ShowPokemonView pokemon={poke} key={i} />

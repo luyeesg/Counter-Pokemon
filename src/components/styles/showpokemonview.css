@@ -6,6 +6,12 @@
   animation: 1s slideInLeft;
 }
 
+.back-icon {
+  display: flex;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
 .show-pokemon {
   padding: 80px 0 20px 0;
   min-height: 100vh;

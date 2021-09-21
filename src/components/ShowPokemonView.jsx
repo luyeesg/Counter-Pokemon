@@ -1,8 +1,10 @@
 import React from "react";
 import "./styles/showpokemonview.css";
-import { superEffective } from "../data/supereffective"
-import { Effective } from "../data/effective"
-import { Immune } from "../data/immune"
+import { superEffective } from "../data/supereffective";
+import { Effective } from "../data/effective";
+import { Immune } from "../data/immune";
+import { Link } from "react-router-dom";
+import back from "../imgs/back-icon.png";
 
 const ShowPokemonView = ({ pokemon }) => {
   const type = pokemon.types[0].type.name;
@@ -10,6 +12,11 @@ const ShowPokemonView = ({ pokemon }) => {
 
   return (
     <div className={`show-pokemon ${type}`}>
+      <div className="back-icon">
+        <Link to={"/"}>
+          <img src={back} alt="home icon" />
+        </Link>
+      </div>
       <h2 className="show-title">{pokemon.name}</h2>
       <p className="show-pokemon-id">#{pokemon.id}</p>
       <div className="show-pokemon-img-container">
@@ -35,12 +42,8 @@ const ShowPokemonView = ({ pokemon }) => {
           <div className="show-super-effective">
             {superEffective(type, type2)}
           </div>
-          <div className="show-effective">
-            {Effective(type, type2)}
-          </div>
-          <div className="show-immune">
-            {Immune(type, type2)}
-          </div>
+          <div className="show-effective">{Effective(type, type2)}</div>
+          <div className="show-immune">{Immune(type, type2)}</div>
         </div>
       </div>
     </div>
