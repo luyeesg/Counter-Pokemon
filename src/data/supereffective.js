@@ -199,6 +199,13 @@ const superEffective = (type, type2) => {
         <span className="show-types">Fighting</span>
       </>
     );
+  } else if (type === "rock" && type2 === "poison") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Ground</span>
+      </>
+    );
   } else if (type === "ice" && type2 === "flying") {
     return (
       <>
@@ -216,6 +223,13 @@ const superEffective = (type, type2) => {
         <span className="show-types">Ice</span>
       </>
     );
+  } else if (type === "dragon" && type2 === "fighting") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Fairy</span>
+      </>
+    );
   } else if (type === "dark" && type2 === "ice") {
     return (
       <>
@@ -225,7 +239,7 @@ const superEffective = (type, type2) => {
     );
   } else if (
     (type === "dark" && type2 === "fighting") ||
-    (type === "dark" && type2 === "fighting")
+    (type === "fighting" && type2 === "dark")
   ) {
     return (
       <>
