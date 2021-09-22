@@ -14,7 +14,7 @@ const Cards = ({ pokemon }) => {
     allPokemon.map((poke) =>
       axios.get(`${poke}`).then((res) => setShowPokemon([res.data]))
     );
-  }, [allPokemon]);
+  }, [allPokemon]); 
 
   return (
     <>
