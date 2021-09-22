@@ -12,5 +12,5 @@ Counter Pokémon is a Pokédex made with React and PokéAPI. The motivation to b
 * CSS3
 * Javascript
 * React.js
-* React Context API
+* Redux.js/Toolkit
 * PokéAPI
