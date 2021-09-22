@@ -16,7 +16,7 @@ a {
 }
 
 .pokemon-img {
-  width: 250px;
+  width: 230px;
 }
 
 .pokemon-img:hover {
@@ -77,7 +77,7 @@ a {
 }
 
 .fire {
-  background-color: #DF8544;
+  background-color: #df8544;
 }
 
 .grass {
@@ -137,7 +137,7 @@ a {
 }
 
 .fairy {
-  background-color: #E09DAC;
+  background-color: #e09dac;
 }
 
 .steel {
