@@ -1,15 +1,16 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import Cards from "./Cards";
 import "./styles/searchbar.css";
-import { SearchContext } from "../context/SearchContext";
+import { useDispatch } from "react-redux";
+import { search } from "../redux/user";
 
 // Pokedex fetchea un array con todo los pokemon y envia la información al componente Cards
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState([]);
-  const [searchTerm, setSearchTerm] = useContext(SearchContext);
+  const dispatch = useDispatch()
 
   useEffect(() => {
     axios
@@ -18,7 +19,7 @@ const Pokedex = () => {
   }, []);
 
   const handleOnChange = (e) => {
-    setSearchTerm(e.target.value);
+    dispatch(search({ searchTerm: e.target.value }))
     e.preventDefault();
   };
 

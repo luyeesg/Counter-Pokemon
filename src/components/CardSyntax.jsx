@@ -1,17 +1,18 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./styles/cardsyntax.css";
 import { Link } from "react-router-dom";
-import { SearchContext } from "../context/SearchContext";
+import { useDispatch } from "react-redux";
+import { search } from "../redux/user";
 
 //CardSyntax toma la informacón de Cards, la organiza y la muestra
 
 const CardSyntax = ({ pokemon }) => {
-  const [searchTerm, setSearchTerm] = useContext(SearchContext);
+  const dispatch = useDispatch()
   const type = pokemon.types[0].type.name;
   const type2 = pokemon.types.length > 1 ? pokemon.types[1].type.name : "";
 
   const handleOnClick = () => {
-    setSearchTerm("");
+    dispatch(search({ searchTerm: "" }))
   };
 
   return (

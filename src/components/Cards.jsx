@@ -1,14 +1,14 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CardSyntax from "./CardSyntax";
-import { SearchContext } from "../context/SearchContext";
+import { useSelector } from "react-redux";
 
 //Cards toma la información de Pokedex y la fetchea de nuevo, la guarda en un array y la envia a CardSyntax
 
 const Cards = ({ pokemon }) => {
   const [allPokemon] = useState([pokemon.url]);
   const [showPokemon, setShowPokemon] = useState([]);
-  const [searchTerm] = useContext(SearchContext);
+  const user = useSelector((state) => state.user.value)
 
   useEffect(() => {
     allPokemon.map((poke) =>
@@ -20,9 +20,9 @@ const Cards = ({ pokemon }) => {
     <>
       {showPokemon
         .filter((p) => {
-          if (searchTerm === "") {
+          if (user.searchTerm === "") {
             return <CardSyntax pokemon={p} key={p} />;
-          } else if (p.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+          } else if (p.name.toLowerCase().includes(user.searchTerm.toLowerCase())) {
             return <CardSyntax pokemon={p} key={p} />;
           }
           return false

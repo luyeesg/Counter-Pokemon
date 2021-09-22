@@ -2,13 +2,14 @@ import React from "react";
 import Pokedex from "./components/Pokedex";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PokemonView from "./components/PokemonView";
-import SearchProvider from "./context/SearchContext";
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 const App = () => {
   return (
     <>
       <div className="app">
-        <SearchProvider>
+        <Provider store={store}>
           <Router>
             <Switch>
               <Route exact path="/">
@@ -19,7 +20,7 @@ const App = () => {
               </Route>
             </Switch>
           </Router>
-        </SearchProvider>
+        </Provider>
       </div>
     </>
   );
