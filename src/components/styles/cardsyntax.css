@@ -68,46 +68,6 @@ a {
   }
 }
 
-/* body {
-  text-align: center;
-  background-color: #e6e6e6;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.title {
-  margin-top: 20px;
-  font-size: 30px;
-  text-transform: capitalize;
-  color: black;
-}
-
-.pokemon-img {
-  width: 230px;
-}
-
-.pokemon-img:hover {
-  transform: scale(1.1);
-}
-
-.types {
-  color: white;
-  font-weight: 600;
-  font-size: 25px;
-  text-transform: capitalize;
-  padding: 20px 80px;
-  margin-bottom: 20px;
-  border-radius: 60px;
-  background-color: white;
-}
-
-.black {
-  color: black !important;
-} */
-
 @keyframes slideInLeft {
   from {
     transform: translateX(-10rem);
