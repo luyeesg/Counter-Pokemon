@@ -1,5 +1,50 @@
 body {
   text-align: center;
+  background-color: #EFEFEF;
+}
+
+.pokemon-img-container img {
+  width: 180px;
+}
+
+.background-container {
+  width: 340px;
+  height: 300px;
+  border-radius: 27px;
+  background-color: white;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  color: black;
+}
+
+.pokemon-types {
+  margin: 0 55px;
+}
+
+.types {
+  color: white;
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: capitalize;
+  padding: 15px 80px;
+  border-radius: 60px;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* body {
+  text-align: center;
   background-color: #e6e6e6;
 }
 
@@ -36,7 +81,7 @@ a {
 
 .black {
   color: black !important;
-}
+} */
 
 @keyframes slideInLeft {
   from {
