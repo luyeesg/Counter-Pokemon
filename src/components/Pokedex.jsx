@@ -16,7 +16,7 @@ const Pokedex = () => {
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon?limit=809&offset=0`)
+      .get(`https://pokeapi.co/api/v2/pokemon?limit=898&offset=0`)
       .then((res) => setPokemon(res.data.results));
   }, []);
 

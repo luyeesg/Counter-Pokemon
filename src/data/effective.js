@@ -47,7 +47,10 @@ const Effective = (type, type2) => {
         <span className="show-types">Rock</span>
       </>
     );
-  } else if (type === "grass" && type2 === "dark") {
+  } else if (
+    (type === "grass" && type2 === "dark") ||
+    (type === "dark" && type2 === "grass")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Effective</h3>
@@ -98,6 +101,17 @@ const Effective = (type, type2) => {
         <span className="show-types">Fighting</span>
       </>
     );
+  } else if (type === "grass" && type2 === "dragon") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Dragon</span>
+        <span className="show-types">Poison</span>
+        <span className="show-types">Fairy</span>
+        <span className="show-types">Bug</span>
+      </>
+    );
   } else if (type === "fire" && type2 === "") {
     return (
       <>
@@ -115,7 +129,10 @@ const Effective = (type, type2) => {
         <span className="show-types">Water</span>
       </>
     );
-  } else if (type === "fire" && type2 === "rock") {
+  } else if (
+    (type === "fire" && type2 === "rock") ||
+    (type === "rock" && type2 === "fire")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Effective</h3>
@@ -239,7 +256,10 @@ const Effective = (type, type2) => {
         <span className="show-types">Ghost</span>
       </>
     );
-  } else if (type === "water" && type2 === "flying") {
+  } else if (
+    (type === "water" && type2 === "flying") ||
+    (type === "flying" && type2 === "water")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Effective</h3>
@@ -397,7 +417,10 @@ const Effective = (type, type2) => {
         <span className="show-types">Rock</span>
       </>
     );
-  } else if (type === "bug" && type2 === "fire") {
+  } else if (
+    (type === "bug" && type2 === "fire") ||
+    (type === "fire" && type2 === "bug")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Effective</h3>
@@ -414,6 +437,18 @@ const Effective = (type, type2) => {
         <span className="show-types">Flying</span>
         <span className="show-types">Poison</span>
         <span className="show-types">Rock</span>
+      </>
+    );
+  } else if (type === "bug" && type2 === "psychic") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Ghost</span>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Dark</span>
+        <span className="show-types">Rock</span>
+        <span className="show-types">Bug</span>
       </>
     );
   } else if (type === "normal" && type2 === "") {
@@ -440,7 +475,10 @@ const Effective = (type, type2) => {
         <span className="show-types">Poison</span>
       </>
     );
-  } else if (type === "normal" && type2 === "psychic") {
+  } else if (
+    (type === "normal" && type2 === "psychic") ||
+    (type === "psychic" && type2 === "normal")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Effective</h3>
@@ -598,6 +636,33 @@ const Effective = (type, type2) => {
         <h3 className="show-effectiness">Effective</h3>
         <span className="show-types">Ground</span>
         <span className="show-types">Fighting</span>
+      </>
+    );
+  } else if (type === "electric" && type2 === "poison") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Psychic</span>
+      </>
+    );
+  } else if (type === "electric" && type2 === "dark") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fairy</span>
+        <span className="show-types">Bug</span>
+        <span className="show-types">Fighting</span>
+        <span className="show-types">Ground</span>
+      </>
+    );
+  } else if (type === "electric" && type2 === "ice") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Ground</span>
+        <span className="show-types">Fighting</span>
+        <span className="show-types">Rock</span>
       </>
     );
   } else if (type === "ground" && type2 === "") {
@@ -956,7 +1021,10 @@ const Effective = (type, type2) => {
         <span className="show-types">Ghost</span>
       </>
     );
-  } else if (type === "ghost" && type2 === "dragon") {
+  } else if (
+    (type === "ghost" && type2 === "dragon") ||
+    (type === "dragon" && type2 === "ghost")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Effective</h3>
@@ -1067,6 +1135,14 @@ const Effective = (type, type2) => {
         <span className="show-types">Ghost</span>
       </>
     );
+  } else if (type === "ice" && type2 === "bug") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Flying</span>
+      </>
+    );
   } else if (type === "dragon" && type2 === "") {
     return (
       <>
@@ -1111,7 +1187,10 @@ const Effective = (type, type2) => {
         <span className="show-types">Rock</span>
       </>
     );
-  } else if (type === "dragon" && type2 === "electric") {
+  } else if (
+    (type === "dragon" && type2 === "electric") ||
+    (type === "electric" && type2 === "dragon")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Effective</h3>
@@ -1232,6 +1311,23 @@ const Effective = (type, type2) => {
         <span className="show-types">Fairy</span>
       </>
     );
+  } else if (type === "dark" && type2 === "fairy") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Steel</span>
+        <span className="show-types">Fairy</span>
+        <span className="show-types">Poison</span>
+      </>
+    );
+  } else if (type === "dark" && type2 === "normal") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fairy</span>
+        <span className="show-types">Bug</span>
+      </>
+    );
   } else if (type === "steel" && type2 === "") {
     return (
       <>
@@ -1254,7 +1350,10 @@ const Effective = (type, type2) => {
         <span className="show-types">Fighting</span>
       </>
     );
-  } else if (type === "steel" && type2 === "flying") {
+  } else if (
+    (type === "steel" && type2 === "flying") ||
+    (type === "flying" && type2 === "steel")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Effective</h3>

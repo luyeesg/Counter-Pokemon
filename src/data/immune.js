@@ -8,7 +8,10 @@ const Immune = (type, type2) => {
         <span className="show-types">Ground</span>
       </>
     );
-  } else if (type === "grass" && type2 === "dark") {
+  } else if (
+    (type === "grass" && type2 === "dark") ||
+    (type === "dark" && type2 === "grass")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Immune</h3>
@@ -64,7 +67,10 @@ const Immune = (type, type2) => {
         <span className="show-types">Dragon</span>
       </>
     );
-  } else if (type === "water" && type2 === "flying") {
+  } else if (
+    (type === "water" && type2 === "flying") ||
+    (type === "flying" && type2 === "water")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Immune</h3>
@@ -152,7 +158,10 @@ const Immune = (type, type2) => {
         <span className="show-types">Ghost</span>
       </>
     );
-  } else if (type === "normal" && type2 === "psychic") {
+  } else if (
+    (type === "normal" && type2 === "psychic") ||
+    (type === "psychic" && type2 === "normal")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Immune</h3>
@@ -381,7 +390,10 @@ const Immune = (type, type2) => {
         <span className="show-types">Fighting</span>
       </>
     );
-  } else if (type === "ghost" && type2 === "dragon") {
+  } else if (
+    (type === "ghost" && type2 === "dragon") ||
+    (type === "dragon" && type2 === "ghost")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Immune</h3>
@@ -536,7 +548,10 @@ const Immune = (type, type2) => {
         <span className="show-types">Poison</span>
       </>
     );
-  } else if (type === "steel" && type2 === "flying") {
+  } else if (
+    (type === "steel" && type2 === "flying") ||
+    (type === "flying" && type2 === "steel")
+  ) {
     return (
       <>
         <h3 className="show-effectiness">Immune</h3>
