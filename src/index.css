@@ -20,30 +20,42 @@ code {
 .container {
   display: grid;
   grid-template-columns: repeat(6, 340px);
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
 }
 
-@media (max-width: 1670px) {
+@media (max-width: 2186px) {
+  .container {
+    grid-template-columns: repeat(5, 340px);
+  }
+}
+
+@media (max-width: 1822px) {
   .container {
     grid-template-columns: repeat(4, 340px);
   }
 }
 
-@media (max-width: 1118px) {
+@media (max-width: 1452px) {
   .container {
     grid-template-columns: repeat(3, 340px);
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1092px) {
   .container {
     grid-template-columns: repeat(2, 340px);
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 720px) {
   .container {
     grid-template-columns: 340px;
+  }
+}
+
+@media (max-width: 350px) {
+  .container {
+    grid-template-columns: 280px;
   }
 }

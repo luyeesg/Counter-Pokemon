@@ -3,13 +3,26 @@ body {
   background-color: #EFEFEF;
 }
 
+.pokemon-container {
+  margin-bottom: 55px;
+}
+
+.cards-container {
+  position: relative;
+  bottom: 60px;
+}
+
 .pokemon-img-container img {
   width: 180px;
 }
 
+.pokemon-img-container img:hover {
+  transform: scale(1.1);
+}
+
 .background-container {
   width: 340px;
-  height: 300px;
+  height: 290px;
   border-radius: 27px;
   background-color: white;
 }
@@ -41,6 +54,18 @@ body {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+@media (max-width: 350px) {
+  .background-container {
+    width: 280px;
+    height: 290px;
+    border-radius: 27px;
+    background-color: white;
+  }
+  .pokemon-types {
+    margin: 0 30px;
+  }
 }
 
 /* body {

@@ -20,21 +20,25 @@ const CardSyntax = ({ pokemon }) => {
       <Link to={`/view/${pokemon.name}`}>
         <div className="pokemon-container">
           <div className="background-container">
-            <div className="pokemon-img-container">
-              <img
-                src={pokemon.sprites.other["official-artwork"].front_default}
-                alt={pokemon.name}
-                title={pokemon.name}
-              />
-            </div>
-            <h2 className="title">{pokemon.name}</h2>
-            <div className="pokemon-types">
-              <p className={`types ${type}`}>{type}</p>
-              {pokemon.types.length > 1 ? (
-                <p className={`types ${type2}`}>{pokemon.types[1].type.name}</p>
-              ) : (
-                <span></span>
-              )}
+            <div className="cards-container">
+              <div className="pokemon-img-container">
+                <img
+                  src={pokemon.sprites.other["official-artwork"].front_default}
+                  alt={pokemon.name}
+                  title={pokemon.name}
+                />
+              </div>
+              <h2 className="title">{pokemon.name}</h2>
+              <div className="pokemon-types">
+                <p className={`types ${type}`}>{type}</p>
+                {pokemon.types.length > 1 ? (
+                  <p className={`types ${type2}`}>
+                    {pokemon.types[1].type.name}
+                  </p>
+                ) : (
+                  <span></span>
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -4,6 +4,8 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  margin-bottom: 55px;
+  z-index: 3;
 }
 
 .search {
@@ -11,9 +13,9 @@
   width: 50rem;
   height: 3.5rem;
   border: none;
-  font-size: 1.3rem;
+  font-size: 20px;
   text-align: center;
-  background-color: #E6E6E6;
+  background-color: #DDDDDD;
   animation: 1s out;
 }
 
