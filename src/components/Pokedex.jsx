@@ -5,21 +5,23 @@ import Cards from "./Cards";
 import "./styles/searchbar.css";
 import { useDispatch } from "react-redux";
 import { search } from "../redux/user";
+import { useSelector } from "react-redux";
 
 // Pokedex fetchea un array con todo los pokemon y envia la información al componente Cards
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState([]);
-  const dispatch = useDispatch()
+  const user = useSelector((state) => state.user.value)
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon?limit=251&offset=0`)
+      .get(`https://pokeapi.co/api/v2/pokemon?limit=809&offset=0`)
       .then((res) => setPokemon(res.data.results));
   }, []);
 
   const handleOnChange = (e) => {
-    dispatch(search({ searchTerm: e.target.value }))
+    dispatch(search({ searchTerm: e.target.value }));
     e.preventDefault();
   };
 
@@ -31,6 +33,7 @@ const Pokedex = () => {
       <div className="searchbar">
         <input
           type="text"
+          value={user.searchTerm}
           placeholder="Looking for a Pókemon?"
           className="search"
           onChange={handleOnChange}
