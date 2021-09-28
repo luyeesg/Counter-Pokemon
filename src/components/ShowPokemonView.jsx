@@ -17,7 +17,7 @@ const ShowPokemonView = ({ pokemon }) => {
           <img src={back} alt="home icon" />
         </Link>
       </div>
-      <h2 className="show-title">{pokemon.name}</h2>
+      <h1 className="show-title">{pokemon.name}</h1>
       <p className="show-pokemon-id">#{pokemon.id}</p>
       <div className="show-pokemon-img-container">
         <img
