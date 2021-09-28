@@ -28,7 +28,7 @@ const CardSyntax = ({ pokemon }) => {
                   title={pokemon.name}
                 />
               </div>
-              <h2 className="title">{pokemon.name}</h2>
+              <p className="title">{pokemon.name}</p>
               <div className="pokemon-types">
                 <p className={`types ${type}`}>{type}</p>
                 {pokemon.types.length > 1 ? (
