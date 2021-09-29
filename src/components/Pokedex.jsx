@@ -6,11 +6,16 @@ import "./styles/searchbar.css";
 import { useDispatch } from "react-redux";
 import { search } from "../redux/user";
 import { useSelector } from "react-redux";
+import { darkMode } from "../redux/setting";
+
+import dark from "../imgs/dark-mode-icon.png";
+// import settings from "../imgs/settings-icon.png";
 
 // Pokedex fetchea un array con todo los pokemon y envia la información al componente Cards
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState([]);
+  const setting = useSelector((state) => state.setting.value);
   const user = useSelector((state) => state.user.value);
   const dispatch = useDispatch();
 
@@ -25,6 +30,10 @@ const Pokedex = () => {
     e.preventDefault();
   };
 
+  const handleOnClickDarkMode = () => {
+    dispatch(darkMode({ darkModeActive: !setting.darkModeActive }));
+  };
+
   return (
     <>
       <Helmet>
@@ -37,7 +46,19 @@ const Pokedex = () => {
           placeholder="Looking for a Pókemon?"
           className="search"
           onChange={handleOnChange}
+          style={
+            setting.darkModeActive
+              ? { backgroundColor: "#232323", color: "white" }
+              : { backgroundColor: "#DDDDDD" }
+          }
         />
+        <img
+          src={dark}
+          onClick={handleOnClickDarkMode}
+          alt="Dark Mode"
+          title="Dark Mode"
+        />
+        {/* <img src={settings} alt="Settings" title="Settings" /> */}
       </div>
       <div className="container">
         {pokemon.map((poke, i) => (

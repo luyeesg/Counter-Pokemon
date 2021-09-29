@@ -3,10 +3,12 @@ import "./styles/cardsyntax.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { search } from "../redux/user";
+import { useSelector } from "react-redux";
 
 //CardSyntax toma la informacón de Cards, la organiza y la muestra
 
 const CardSyntax = ({ pokemon }) => {
+  const setting = useSelector((state) => state.setting.value);
   const dispatch = useDispatch();
   const type = pokemon.types[0].type.name;
   const type2 = pokemon.types.length > 1 ? pokemon.types[1].type.name : "";
@@ -19,7 +21,14 @@ const CardSyntax = ({ pokemon }) => {
     <div className="pokemon" onClick={handleOnClick}>
       <Link to={`/view/${pokemon.name}`}>
         <div className="pokemon-container">
-          <div className="background-container">
+          <div
+            className="background-container"
+            style={
+              setting.darkModeActive
+                ? { backgroundColor: "#181818" }
+                : { backgroundColor: "white" }
+            }
+          >
             <div className="cards-container">
               <div className="pokemon-img-container">
                 <img
@@ -28,7 +37,16 @@ const CardSyntax = ({ pokemon }) => {
                   title={pokemon.name}
                 />
               </div>
-              <p className="title">{pokemon.name}</p>
+              <p
+                className="title"
+                style={
+                  setting.darkModeActive
+                    ? { color: "white" }
+                    : { color: "black" }
+                }
+              >
+                {pokemon.name}
+              </p>
               <div className="pokemon-types">
                 <p className={`types ${type}`}>{type}</p>
                 {pokemon.types.length > 1 ? (
