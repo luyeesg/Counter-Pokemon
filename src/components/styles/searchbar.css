@@ -1,8 +1,19 @@
+.options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-icons img {
+  margin-bottom: 50px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 .searchbar {
-  padding-top: 1.3rem;
-  padding-bottom: 1.3rem;
   position: -webkit-sticky;
   position: sticky;
+  padding: 30px 0;
   top: 0;
   margin-bottom: 55px;
   z-index: 3;
@@ -10,8 +21,8 @@
 
 .search {
   border-radius: 6rem;
-  width: 50rem;
-  height: 3.5rem;
+  width: 550px;
+  height: 55px;
   border: none;
   font-size: 20px;
   text-align: center;
@@ -31,20 +42,14 @@
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 720px) {
   .search {
-    width: 30rem;
+    width: 340px;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 350px) {
   .search {
-    width: 20rem;
-  }
-}
-
-@media (max-width: 323px) {
-  .search {
-    width: 15rem;
+    width: 280px;
   }
 }

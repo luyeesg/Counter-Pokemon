@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState([]);
-  const user = useSelector((state) => state.user.value)
+  const user = useSelector((state) => state.user.value);
   const dispatch = useDispatch();
 
   useEffect(() => {
