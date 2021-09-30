@@ -38,6 +38,11 @@ const Pokedex = () => {
     <>
       <Helmet>
         <title>counterpokemon.com</title>
+        <style>
+          {setting.darkModeActive
+            ? "body { background-color: #303030; }"
+            : "body { background-color: #EFEFEF; }"}
+        </style>
       </Helmet>
       <div className="searchbar">
         <input
