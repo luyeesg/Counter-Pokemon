@@ -12,14 +12,14 @@
 
 .searchbar img {
   width: 25px;
-  margin-left: 5px;
+  transform: translateX(10px);
   cursor: pointer;
   animation: 1s out;
 }
 
 .search {
   border-radius: 6rem;
-  width: clamp(227px, 380px, 550px);
+  width: clamp(227px, 50%, 550px);
   height: 55px;
   border: none;
   font-size: 20px;

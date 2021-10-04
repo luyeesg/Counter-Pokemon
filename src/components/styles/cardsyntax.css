@@ -1,3 +1,9 @@
+.pokemon > a {
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: bold;
+}
+
 .pokemon-container {
   margin-bottom: 55px;
 }
@@ -43,12 +49,6 @@
   border-radius: 60px;
   margin-bottom: 7px;
   background-color: white;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-  font-weight: bold;
 }
 
 @media (max-width: 350px) {
