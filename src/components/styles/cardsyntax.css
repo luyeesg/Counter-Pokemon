@@ -16,7 +16,7 @@
 }
 
 .background-container {
-  width: 340px;
+  width: auto;
   height: 290px;
   border-radius: 27px;
   background-color: white;
@@ -52,12 +52,6 @@ a {
 }
 
 @media (max-width: 350px) {
-  .background-container {
-    width: 280px;
-    height: 290px;
-    border-radius: 27px;
-    background-color: white;
-  }
   .pokemon-types {
     margin: 0 30px;
   }
