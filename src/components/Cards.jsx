@@ -8,13 +8,13 @@ import { useSelector } from "react-redux";
 const Cards = ({ pokemon }) => {
   const [allPokemon] = useState([pokemon.url]);
   const [showPokemon, setShowPokemon] = useState([]);
-  const user = useSelector((state) => state.user.value)
+  const user = useSelector((state) => state.user.value);
 
   useEffect(() => {
     allPokemon.map((poke) =>
       axios.get(`${poke}`).then((res) => setShowPokemon([res.data]))
     );
-  }, [allPokemon]); 
+  }, [allPokemon]);
 
   return (
     <>
@@ -22,10 +22,12 @@ const Cards = ({ pokemon }) => {
         .filter((p) => {
           if (user.searchTerm === "") {
             return <CardSyntax pokemon={p} key={p} />;
-          } else if (p.name.toLowerCase().includes(user.searchTerm.toLowerCase())) {
+          } else if (
+            p.name.toLowerCase().includes(user.searchTerm.toLowerCase())
+          ) {
             return <CardSyntax pokemon={p} key={p} />;
           }
-          return false
+          return false;
         })
         .map((p, i) => (
           <CardSyntax pokemon={p} key={i} />
