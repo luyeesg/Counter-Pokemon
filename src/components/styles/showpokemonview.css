@@ -22,7 +22,7 @@
 }
 
 .show-pokemon-img {
-  width: 450px;
+  width: clamp(240px, 50%, 400px);
   animation: 1s bottomToTop;
 }
 
@@ -69,8 +69,8 @@
 .show-effective,
 .show-super-effective,
 .show-immune {
-  margin: auto;
   width: 700px;
+  margin: auto;
   height: auto;
 }
 
@@ -81,18 +81,6 @@
     margin: auto;
     width: auto;
     height: auto;
-  }
-}
-
-@media (max-width: 502px) {
-  .show-pokemon-img {
-    width: 350px;
-  }
-}
-
-@media (max-width: 400px) {
-  .show-pokemon-img {
-    width: 280px;
   }
 }
 
