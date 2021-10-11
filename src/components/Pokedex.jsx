@@ -8,8 +8,9 @@ import { search } from "../redux/user";
 import { useSelector } from "react-redux";
 import { darkMode } from "../redux/setting";
 
-import dark from "../imgs/dark-mode-icon.png";
-// import settings from "../imgs/settings-icon.png";
+import dark from "../imgs/dark-mode-icon.svg";
+// import settings from "../imgs/settings-icon.svg";
+import github from "../imgs/github.svg";
 
 // Pokedex fetchea un array con todo los pokemon y envia la información al componente Cards
 
@@ -45,6 +46,29 @@ const Pokedex = () => {
         </style>
       </Helmet>
       <div className="searchbar">
+        <a
+          href="https://github.com/yerovyespitia/counterpokemon"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="github-icon"
+            src={github}
+            alt="Github"
+            title="Github"
+            style={
+              setting.darkModeActive
+                ? {
+                    filter:
+                      "invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(102%) contrast(102%)",
+                  }
+                : {
+                    filter:
+                      "invert(0%) sepia(92%) saturate(0%) hue-rotate(26deg) brightness(102%) contrast(103%)",
+                  }
+            }
+          />
+        </a>
         <input
           type="text"
           value={user.searchTerm}
@@ -58,12 +82,39 @@ const Pokedex = () => {
           }
         />
         <img
+          className="darkmode-icon"
           src={dark}
           onClick={handleOnClickDarkMode}
           alt="Dark Mode"
           title="Dark Mode"
+          style={
+            setting.darkModeActive
+              ? {
+                  filter:
+                    "invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(102%) contrast(102%)",
+                }
+              : {
+                  filter:
+                    "invert(0%) sepia(92%) saturate(0%) hue-rotate(26deg) brightness(102%) contrast(103%)",
+                }
+          }
         />
-        {/* <img src={settings} alt="Settings" title="Settings" /> */}
+        {/* <img
+          src={settings}
+          alt="Settings"
+          title="Settings"
+          style={
+            setting.darkModeActive
+              ? {
+                  filter:
+                    "invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(102%) contrast(102%)",
+                }
+              : {
+                  filter:
+                    "invert(0%) sepia(92%) saturate(0%) hue-rotate(26deg) brightness(102%) contrast(103%)",
+                }
+          }
+        /> */}
       </div>
       <div className="container">
         {pokemon.map((poke, i) => (

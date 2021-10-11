@@ -10,6 +10,11 @@
   z-index: 3;
 }
 
+.searchbar img:first-child {
+  width: 30px;
+  transform: translateX(-10px);
+}
+
 .searchbar img {
   width: 25px;
   transform: translateX(10px);
@@ -19,7 +24,7 @@
 
 .search {
   border-radius: 6rem;
-  width: clamp(227px, 50%, 550px);
+  width: clamp(200px, 50%, 650px);
   height: 55px;
   border: none;
   font-size: 20px;
