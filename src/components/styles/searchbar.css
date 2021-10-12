@@ -6,25 +6,23 @@
   position: sticky;
   padding: 30px 0;
   top: 0;
-  margin-bottom: 55px;
   z-index: 3;
 }
 
-.searchbar img:first-child {
-  width: 30px;
-  transform: translateX(-10px);
+.icons-container {
+  margin-bottom: 60px;
 }
 
-.searchbar img {
-  width: 25px;
-  transform: translateX(10px);
+.icons-container img {
+  width: 30px;
+  margin-right: 10px;
   cursor: pointer;
   animation: 1s out;
 }
 
 .search {
   border-radius: 6rem;
-  width: clamp(200px, 50%, 650px);
+  width: clamp(255px, 50%, 650px);
   height: 55px;
   border: none;
   font-size: 20px;

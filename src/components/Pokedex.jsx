@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import { darkMode } from "../redux/setting";
 
 import dark from "../imgs/dark-mode-icon.svg";
-// import settings from "../imgs/settings-icon.svg";
+import settings from "../imgs/settings-icon.svg";
 import github from "../imgs/github.svg";
 
 // Pokedex fetchea un array con todo los pokemon y envia la información al componente Cards
@@ -46,6 +46,20 @@ const Pokedex = () => {
         </style>
       </Helmet>
       <div className="searchbar">
+        <input
+          type="text"
+          value={user.searchTerm}
+          placeholder="Looking for a Pókemon?"
+          className="search"
+          onChange={handleOnChange}
+          style={
+            setting.darkModeActive
+              ? { backgroundColor: "#232323", color: "white" }
+              : { backgroundColor: "#DDDDDD" }
+          }
+        />
+      </div>
+      <div className="icons-container">
         <a
           href="https://github.com/yerovyespitia/counterpokemon"
           target="_blank"
@@ -69,18 +83,6 @@ const Pokedex = () => {
             }
           />
         </a>
-        <input
-          type="text"
-          value={user.searchTerm}
-          placeholder="Looking for a Pókemon?"
-          className="search"
-          onChange={handleOnChange}
-          style={
-            setting.darkModeActive
-              ? { backgroundColor: "#232323", color: "white" }
-              : { backgroundColor: "#DDDDDD" }
-          }
-        />
         <img
           className="darkmode-icon"
           src={dark}
@@ -99,7 +101,7 @@ const Pokedex = () => {
                 }
           }
         />
-        {/* <img
+        <img
           src={settings}
           alt="Settings"
           title="Settings"
@@ -114,7 +116,7 @@ const Pokedex = () => {
                     "invert(0%) sepia(92%) saturate(0%) hue-rotate(26deg) brightness(102%) contrast(103%)",
                 }
           }
-        /> */}
+        />
       </div>
       <div className="container">
         {pokemon.map((poke, i) => (
