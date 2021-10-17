@@ -15,10 +15,11 @@
 
 .pokemon-img-container img {
   width: 180px;
+  transition: all ease-in .3s;
 }
 
 .pokemon-img-container img:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 .background-container {
