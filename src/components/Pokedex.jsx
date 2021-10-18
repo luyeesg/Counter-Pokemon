@@ -3,9 +3,8 @@ import { Helmet } from "react-helmet";
 import axios from "axios";
 import Cards from "./Cards";
 import "./styles/searchbar.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { search } from "../redux/user";
-import { useSelector } from "react-redux";
 import { darkMode } from "../redux/setting";
 
 import dark from "../imgs/dark-mode-icon.svg";
