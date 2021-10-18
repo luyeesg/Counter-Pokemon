@@ -35,6 +35,7 @@
   font-weight: bolder;
   margin-bottom: 5px;
   text-transform: capitalize;
+  color: white;
 }
 
 .pokemon-types {
@@ -42,7 +43,7 @@
 }
 
 .types {
-  color: white;
+  color: black;
   font-weight: 700;
   font-size: 23px;
   text-transform: capitalize;
@@ -52,11 +53,15 @@
   background-color: white;
 }
 
+/* media queries */
+
 @media (max-width: 350px) {
   .pokemon-types {
     margin: 0 30px;
   }
 }
+
+/* animations */
 
 @keyframes slideInLeft {
   from {
@@ -95,6 +100,8 @@
     transform: translateY(0);
   }
 }
+
+/* types colors */
 
 .fire {
   background-color: #df8544;

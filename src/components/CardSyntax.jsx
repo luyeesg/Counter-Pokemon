@@ -1,9 +1,8 @@
 import React from "react";
 import "./styles/cardsyntax.css";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { search } from "../redux/user";
-import { useSelector } from "react-redux";
 
 //CardSyntax toma la informacón de Cards, la organiza y la muestra
 
@@ -11,7 +10,6 @@ const CardSyntax = ({ pokemon }) => {
   const setting = useSelector((state) => state.setting.value);
   const dispatch = useDispatch();
   const type = pokemon.types[0].type.name;
-  const type2 = pokemon.types.length > 1 ? pokemon.types[1].type.name : "";
 
   const handleOnClick = () => {
     dispatch(search({ searchTerm: "" }));
@@ -22,11 +20,11 @@ const CardSyntax = ({ pokemon }) => {
       <Link to={`/view/${pokemon.name}`}>
         <div className="pokemon-container">
           <div
-            className="background-container"
+            className={`background-container ${type}`}
             style={
               setting.darkModeActive
                 ? { backgroundColor: "#181818" }
-                : { backgroundColor: "white" }
+                : { className: `${type}` }
             }
           >
             <div className="cards-container">
@@ -37,22 +35,11 @@ const CardSyntax = ({ pokemon }) => {
                   title={pokemon.name}
                 />
               </div>
-              <p
-                className="title"
-                style={
-                  setting.darkModeActive
-                    ? { color: "white" }
-                    : { color: "black" }
-                }
-              >
-                {pokemon.name}
-              </p>
+              <p className="title">{pokemon.name}</p>
               <div className="pokemon-types">
-                <p className={`types ${type}`}>{type}</p>
+                <p className={`types`}>{type}</p>
                 {pokemon.types.length > 1 ? (
-                  <p className={`types ${type2}`}>
-                    {pokemon.types[1].type.name}
-                  </p>
+                  <p className={`types`}>{pokemon.types[1].type.name}</p>
                 ) : (
                   <span></span>
                 )}
