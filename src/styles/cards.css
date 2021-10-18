@@ -15,7 +15,7 @@
 
 .pokemon-img-container img {
   width: 180px;
-  transition: all ease-in .3s;
+  transition: all ease-in 0.3s;
 }
 
 .pokemon-img-container img:hover {
@@ -101,7 +101,7 @@
   }
 }
 
-/* types colors */
+/* types colors background */
 
 .fire {
   background-color: #df8544;
@@ -173,4 +173,76 @@
 
 .dark {
   background-color: black;
+}
+
+.fire-color {
+  color: #df8544;
+}
+
+.grass-color {
+  color: #36ba94;
+}
+
+.water-color {
+  color: #0f2a47;
+}
+
+.ghost-color {
+  color: #6f33ce;
+}
+
+.flying-color {
+  color: #8686de;
+}
+
+.bug-color {
+  color: #93c25c;
+}
+
+.electric-color {
+  color: #f3c242;
+}
+
+.ground-color {
+  color: #9e7e3d;
+}
+
+.poison-color {
+  color: #7f67bf;
+}
+
+.normal-color {
+  color: #e6be81;
+}
+
+.fighting-color {
+  color: #c45122;
+}
+
+.psychic-color {
+  color: #db4ac5;
+}
+
+.rock-color {
+  color: #b6b49c;
+}
+
+.ice-color {
+  color: #367ca8;
+}
+
+.dragon-color {
+  color: #cec447;
+}
+
+.fairy-color {
+  color: #e09dac;
+}
+
+.steel-color {
+  color: #bfbfbf;
+}
+
+.dark-color {
+  color: black;
 }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import axios from "axios";
-import Cards from "./Cards";
-import "./styles/searchbar.css";
+import CardsContainer from "../components/CardsContainer";
+import "../styles/searchbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { search } from "../redux/user";
 import { darkMode } from "../redux/setting";
@@ -12,7 +12,8 @@ import light from "../imgs/light-mode-icon.svg";
 import settings from "../imgs/settings-icon.svg";
 import github from "../imgs/github.svg";
 
-// Pokedex fetchea un array con todo los pokemon y envia la información al componente Cards
+// Pokedex es el componente padre de CardsContainer - Cards
+// Pokedex fetchea un array con todo los pokemon y envia la información al componente CardsContainer
 
 const Pokedex = () => {
   const [pokemon, setPokemon] = useState([]);
@@ -127,7 +128,7 @@ const Pokedex = () => {
       </div>
       <div className="container">
         {pokemon.map((poke, i) => (
-          <Cards pokemon={poke} key={i} />
+          <CardsContainer pokemon={poke} key={i} />
         ))}
       </div>
     </>

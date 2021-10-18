@@ -1,38 +1,55 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import CardSyntax from "./CardSyntax";
-import { useSelector } from "react-redux";
+import React from "react";
+import "../styles/cards.css";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { search } from "../redux/user";
 
-//Cards toma la información de Pokedex y la fetchea de nuevo, la guarda en un array y la envia a CardSyntax
+//Cards toma la informacón de CardsContainer, la organiza y la muestra
 
 const Cards = ({ pokemon }) => {
-  const [allPokemon] = useState([pokemon.url]);
-  const [showPokemon, setShowPokemon] = useState([]);
-  const user = useSelector((state) => state.user.value);
+  const setting = useSelector((state) => state.setting.value);
+  const dispatch = useDispatch();
+  const type = pokemon.types[0].type.name;
+  const type2 = pokemon.types.length > 1 ? pokemon.types[1].type.name : "";
 
-  useEffect(() => {
-    allPokemon.map((poke) =>
-      axios.get(`${poke}`).then((res) => setShowPokemon([res.data]))
-    );
-  }, [allPokemon]);
+  const handleOnClick = () => {
+    dispatch(search({ searchTerm: "" }));
+  };
 
   return (
-    <>
-      {showPokemon
-        .filter((p) => {
-          if (user.searchTerm === "") {
-            return <CardSyntax pokemon={p} key={p} />;
-          } else if (
-            p.name.toLowerCase().includes(user.searchTerm.toLowerCase())
-          ) {
-            return <CardSyntax pokemon={p} key={p} />;
-          }
-          return false;
-        })
-        .map((p, i) => (
-          <CardSyntax pokemon={p} key={i} />
-        ))}
-    </>
+    <div className="pokemon" onClick={handleOnClick}>
+      <Link to={`/view/${pokemon.name}`}>
+        <div className="pokemon-container">
+          <div
+            className={`background-container ${type}`}
+            style={
+              setting.darkModeActive
+                ? { backgroundColor: "#181818" }
+                : { className: `${type}` }
+            }
+          >
+            <div className="cards-container">
+              <div className="pokemon-img-container">
+                <img
+                  src={pokemon.sprites.other["official-artwork"].front_default}
+                  alt={pokemon.name}
+                  title={pokemon.name}
+                />
+              </div>
+              <p className="title">{pokemon.name}</p>
+              <div className="pokemon-types">
+                <p className={`types ${type}-color`}>{type}</p>
+                {pokemon.types.length > 1 ? (
+                  <p className={`types ${type2}-color`}>{pokemon.types[1].type.name}</p>
+                ) : (
+                  <span></span>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </div>
   );
 };
 
