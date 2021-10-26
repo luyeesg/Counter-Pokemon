@@ -8,8 +8,6 @@ import { search } from "../redux/user";
 import { darkMode } from "../redux/setting";
 
 import dark from "../imgs/dark-mode-icon.svg";
-import light from "../imgs/light-mode-icon.svg";
-import settings from "../imgs/settings-icon.svg";
 import github from "../imgs/github.svg";
 
 // Pokedex es el componente padre de CardsContainer - Cards
@@ -84,35 +82,12 @@ const Pokedex = () => {
             }
           />
         </a>
-        {setting.darkModeActive ? (
-          <img
-            className="lightmode-icon"
-            src={light}
-            onClick={handleOnClickDarkMode}
-            alt="Light Mode"
-            title="Light Mode"
-            style={{
-              filter:
-                "invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(102%) contrast(102%)",
-            }}
-          />
-        ) : (
-          <img
-            className="darkmode-icon"
-            src={dark}
-            onClick={handleOnClickDarkMode}
-            alt="Dark Mode"
-            title="Dark Mode"
-            style={{
-              filter:
-                "invert(0%) sepia(92%) saturate(0%) hue-rotate(26deg) brightness(102%) contrast(103%)",
-            }}
-          />
-        )}
         <img
-          src={settings}
-          alt="Settings"
-          title="Settings"
+          className="darkmode-icon"
+          src={dark}
+          onClick={handleOnClickDarkMode}
+          alt="Dark Mode"
+          title="Dark Mode"
           style={
             setting.darkModeActive
               ? {
