@@ -112,6 +112,15 @@ const Effective = (type, type2) => {
         <span className="show-types">Bug</span>
       </>
     );
+  } else if (type === "grass" && type2 === "ground") {
+    return (
+      <>
+        <h3 className="show-effectiness">Effective</h3>
+        <span className="show-types">Fire</span>
+        <span className="show-types">Flying</span>
+        <span className="show-types">Bug</span>
+      </>
+    );
   } else if (type === "fire" && type2 === "") {
     return (
       <>

@@ -32,6 +32,13 @@ const Immune = (type, type2) => {
         <span className="show-types">Poison</span>
       </>
     );
+  } else if (type === "grass" && type2 === "ground") {
+    return (
+      <>
+        <h3 className="show-effectiness">Immune</h3>
+        <span className="show-types">Electric</span>
+      </>
+    );
   } else if (type === "fire" && type2 === "flying") {
     return (
       <>

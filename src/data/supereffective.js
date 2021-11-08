@@ -63,6 +63,13 @@ const superEffective = (type, type2) => {
         <span className="show-types">Ice</span>
       </>
     );
+  } else if (type === "grass" && type2 === "ground") {
+    return (
+      <>
+        <h3 className="show-effectiness">Super Effective</h3>
+        <span className="show-types">Ice</span>
+      </>
+    );
   } else if (type === "fire" && type2 === "flying") {
     return (
       <>
