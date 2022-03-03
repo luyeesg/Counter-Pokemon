@@ -6,7 +6,6 @@ import "../styles/searchbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import { search } from "../redux/user";
 import { darkMode } from "../redux/setting";
-
 import dark from "../imgs/dark-mode-icon.svg";
 import github from "../imgs/github.svg";
 
@@ -21,7 +20,7 @@ const Pokedex = () => {
 
   useEffect(() => {
     axios
-      .get(`https://pokeapi.co/api/v2/pokemon?limit=898&offset=0`)
+      .get(`https://pokeapi.co/api/v2/pokemon?limit=898`)
       .then((res) => setPokemon(res.data.results));
   }, []);
 
@@ -102,8 +101,8 @@ const Pokedex = () => {
         />
       </div>
       <div className="container">
-        {pokemon.map((poke, i) => (
-          <CardsContainer pokemon={poke} key={i} />
+        {pokemon.map((poke, index) => (
+          <CardsContainer pokemon={poke} key={index} />
         ))}
       </div>
     </>

@@ -40,7 +40,9 @@ const Cards = ({ pokemon }) => {
               <div className="pokemon-types">
                 <p className={`types ${type}-color`}>{type}</p>
                 {pokemon.types.length > 1 ? (
-                  <p className={`types ${type2}-color`}>{pokemon.types[1].type.name}</p>
+                  <p className={`types ${type2}-color`}>
+                    {pokemon.types[1].type.name}
+                  </p>
                 ) : (
                   <span></span>
                 )}
