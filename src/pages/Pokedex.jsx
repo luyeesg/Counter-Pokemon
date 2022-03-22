@@ -22,7 +22,7 @@ const Pokedex = () => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon?limit=898`)
       .then((res) => setPokemon(res.data.results));
-  }, []);
+  }, [pokemon]);
 
   const handleOnChange = (e) => {
     dispatch(search({ searchTerm: e.target.value }));
